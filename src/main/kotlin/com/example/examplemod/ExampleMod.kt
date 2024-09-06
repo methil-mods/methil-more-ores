@@ -34,6 +34,11 @@ import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Consumer
 import java.util.function.Supplier
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes
+import net.minecraft.client.renderer.RenderType
+import net.minecraft.resources.ResourceLocation
+
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ExampleMod.MODID)
 class ExampleMod {
@@ -77,7 +82,8 @@ class ExampleMod {
                     .withTabsBefore(CreativeModeTabs.COMBAT)
                     .icon { EXAMPLE_ITEM.get().defaultInstance }
                     .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
-                        output.accept(EXAMPLE_ITEM.get()) // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                        output.accept(EXAMPLE_ITEM.get())
+                        output.accept(EXAMPLE_BLOCK_ITEM.get()) // Add the example item to the tab. For your own tabs, this method is preferred over the event
                     }.build()
             })
 
