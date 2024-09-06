@@ -78,7 +78,7 @@ class ExampleMod {
         val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register("example_tab",
             Supplier {
                 CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
+                    .title(Component.translatable("itemGroup.examplemod.examplegroup")) //The language key for the title of your CreativeModeTab
                     .withTabsBefore(CreativeModeTabs.COMBAT)
                     .icon { EXAMPLE_ITEM.get().defaultInstance }
                     .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
