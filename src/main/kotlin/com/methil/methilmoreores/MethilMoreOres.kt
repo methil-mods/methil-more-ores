@@ -1,4 +1,4 @@
-package com.example.examplemod
+package com.methil.methilmoreores
 
 import com.mojang.logging.LogUtils
 import net.minecraft.client.Minecraft
@@ -34,39 +34,31 @@ import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Consumer
 import java.util.function.Supplier
 
-import net.minecraft.client.renderer.ItemBlockRenderTypes
-import net.minecraft.client.renderer.RenderType
-import net.minecraft.resources.ResourceLocation
-
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(ExampleMod.MODID)
-class ExampleMod {
+@Mod(MethilMoreOres.MODID)
+class MethilMoreOres {
     companion object {
-        // Define mod id in a common place for everything to reference
-        const val MODID = "examplemod"
-        // Directly reference a slf4j logger
+
+        const val MODID = "methilmoreores"
+
         private val LOGGER = LogUtils.getLogger();
 
         // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
         val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(
             MODID
         )
-        // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
         val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(
             MODID
         )
-        // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
         val CREATIVE_MODE_TABS: DeferredRegister<CreativeModeTab> =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID)
 
-        // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
         val EXAMPLE_BLOCK: DeferredBlock<Block> =
             BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE))
-        // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
+
         val EXAMPLE_BLOCK_ITEM: DeferredItem<BlockItem> = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK)
 
-        // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
         val EXAMPLE_ITEM: DeferredItem<Item> = ITEMS.registerSimpleItem(
             "example_item", Item.Properties().food(
                 FoodProperties.Builder()
@@ -78,7 +70,7 @@ class ExampleMod {
         val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register("example_tab",
             Supplier {
                 CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.examplemod.examplegroup")) //The language key for the title of your CreativeModeTab
+                    .title(Component.translatable("itemGroup.methil.methilmoreores")) //The language key for the title of your CreativeModeTab
                     .withTabsBefore(CreativeModeTabs.COMBAT)
                     .icon { EXAMPLE_ITEM.get().defaultInstance }
                     .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
