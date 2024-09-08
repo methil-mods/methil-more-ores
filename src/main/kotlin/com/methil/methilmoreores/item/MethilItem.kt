@@ -30,8 +30,18 @@ object MethilItem {
         Supplier { Ingredient.of(METHIL_ITEM) }
     )
 
-    val METHIL_SWORD = ITEMS.register("methil_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
-    val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
+    val METHIL_SWORD = ITEMS.register("methil_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)
+        .attributes(
+            SwordItem.createAttributes(
+                METHIL_TIER,
+                4.5f,
+                -2.1f
+            )
+        )) } )
+    val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties()
+        .rarity(Rarity.EPIC).attributes(PickaxeItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
+    val METHIL_DOUBLE_PICKAXE = ITEMS.register("methil_double_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties()
+        .rarity(Rarity.EPIC).attributes(PickaxeItem.createAttributes(METHIL_TIER, 2f, -2.8f))) } )
 
     fun register(modEventBus: IEventBus){
         ITEMS.register(modEventBus)

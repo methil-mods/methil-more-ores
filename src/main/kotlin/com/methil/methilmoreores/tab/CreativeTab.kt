@@ -2,6 +2,7 @@ package com.methil.methilmoreores.tab
 
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.item.MethilItem.ITEMS
+import com.methil.methilmoreores.item.MethilItem.METHIL_DOUBLE_PICKAXE
 import com.methil.methilmoreores.item.MethilItem.METHIL_ITEM
 import com.methil.methilmoreores.item.MethilItem.METHIL_ORE_BLOCK_ITEM
 import com.methil.methilmoreores.item.MethilItem.METHIL_PICKAXE
@@ -31,8 +32,9 @@ object CreativeTab {
                 .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
                     output.accept(METHIL_ITEM.get())
                     output.accept(METHIL_ORE_BLOCK_ITEM.get())
-                    output.accept(METHIL_PICKAXE.get())
                     output.accept(METHIL_SWORD.get())
+                    output.accept(METHIL_PICKAXE.get())
+                    output.accept(METHIL_DOUBLE_PICKAXE.get())
                 }.build()
         })
 
