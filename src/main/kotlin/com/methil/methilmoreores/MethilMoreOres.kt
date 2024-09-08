@@ -1,16 +1,15 @@
 package com.methil.methilmoreores
 
 import com.mojang.logging.LogUtils
+import io.github.realyusufismail.data.DataGenerators
 import net.minecraft.client.Minecraft
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.food.FoodProperties
-import net.minecraft.world.item.BlockItem
-import net.minecraft.world.item.CreativeModeTab
+import net.minecraft.world.item.*
 import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
-import net.minecraft.world.item.CreativeModeTabs
-import net.minecraft.world.item.Item
+import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.state.BlockBehaviour
@@ -25,6 +24,8 @@ import net.neoforged.fml.config.ModConfig
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
 import net.neoforged.neoforge.common.NeoForge
+import net.neoforged.neoforge.common.SimpleTier
+import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
 import net.neoforged.neoforge.event.server.ServerStartingEvent
 import net.neoforged.neoforge.registries.DeferredBlock
@@ -33,7 +34,6 @@ import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Consumer
 import java.util.function.Supplier
-
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MethilMoreOres.MODID)
@@ -44,7 +44,6 @@ class MethilMoreOres {
 
         private val LOGGER = LogUtils.getLogger();
 
-        // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
         val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(
             MODID
         )
@@ -54,17 +53,26 @@ class MethilMoreOres {
         val CREATIVE_MODE_TABS: DeferredRegister<CreativeModeTab> =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID)
 
+        // Register block and ore
         val METHIL_ORE_BLOCK: DeferredBlock<Block> =
             BLOCKS.registerSimpleBlock("methil_ore", BlockBehaviour.Properties.of().mapColor(MapColor.STONE))
-
         val METHIL_ORE_BLOCK_ITEM: DeferredItem<BlockItem> = ITEMS.registerSimpleBlockItem("methil_ore", METHIL_ORE_BLOCK)
 
         val METHIL_ITEM: DeferredItem<Item> = ITEMS.registerSimpleItem(
-            "methil", Item.Properties().food(
-                FoodProperties.Builder()
-                    .alwaysEdible().nutrition(1).saturationModifier(2f).build()
+            "methil", Item.Properties().rarity(Rarity.EPIC)
             )
+
+        val METHIL_TIER = SimpleTier(
+            Tags.Blocks.ORES,
+            1900,
+            9f,
+            5.5f,
+            26,
+            Supplier { Ingredient.of(METHIL_ITEM) }
         )
+
+        val METHIL_SWORD = ITEMS.register("methil_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
+        val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
 
         val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register("example_tab",
             Supplier {
@@ -74,7 +82,9 @@ class MethilMoreOres {
                     .icon { METHIL_ITEM.get().defaultInstance }
                     .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
                         output.accept(METHIL_ITEM.get())
-                        output.accept(METHIL_ORE_BLOCK_ITEM.get()) // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                        output.accept(METHIL_ORE_BLOCK_ITEM.get())
+                        output.accept(METHIL_PICKAXE.get())
+                        output.accept(METHIL_SWORD.get())
                     }.build()
             })
 
@@ -93,23 +103,16 @@ class MethilMoreOres {
     constructor(modEventBus: IEventBus, modContainer: ModContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(::commonSetup)
+        modEventBus.addListener(DataGenerators::gatherData)
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus)
-        // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus)
-        // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus)
 
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
-        NeoForge.EVENT_BUS.register(this)
 
-        // Register the item to a creative tab
+        NeoForge.EVENT_BUS.register(this)
         modEventBus.addListener(::addCreative)
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC)
     }
 
