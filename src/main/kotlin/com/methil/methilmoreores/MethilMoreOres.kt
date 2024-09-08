@@ -1,12 +1,10 @@
 package com.methil.methilmoreores
 
 import com.mojang.logging.LogUtils
-import io.github.realyusufismail.data.DataGenerators
 import net.minecraft.client.Minecraft
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
-import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.*
 import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
 import net.minecraft.world.item.crafting.Ingredient
@@ -27,7 +25,6 @@ import net.neoforged.neoforge.common.NeoForge
 import net.neoforged.neoforge.common.SimpleTier
 import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
-import net.neoforged.neoforge.event.server.ServerStartingEvent
 import net.neoforged.neoforge.registries.DeferredBlock
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredItem
@@ -37,7 +34,8 @@ import java.util.function.Supplier
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MethilMoreOres.MODID)
-class MethilMoreOres {
+class MethilMoreOres// Register the commonSetup method for modloading
+    (modEventBus: IEventBus, modContainer: ModContainer) {
     companion object {
 
         const val MODID = "methilmoreores"
@@ -74,7 +72,7 @@ class MethilMoreOres {
         val METHIL_SWORD = ITEMS.register("methil_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
         val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
 
-        val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register("example_tab",
+        val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register("creative_tab",
             Supplier {
                 CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.methil.methilmoreores")) //The language key for the title of your CreativeModeTab
@@ -100,19 +98,18 @@ class MethilMoreOres {
         }
     }
 
-    constructor(modEventBus: IEventBus, modContainer: ModContainer) {
-        // Register the commonSetup method for modloading
+    init {
         modEventBus.addListener(::commonSetup)
-        modEventBus.addListener(DataGenerators::gatherData)
-
         BLOCKS.register(modEventBus)
         ITEMS.register(modEventBus)
-        CREATIVE_MODE_TABS.register(modEventBus)
+        
+        // Register ourselves for server and other game events we are interested in.
+        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
+        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
+        // NeoForge.EVENT_BUS.register(this);
 
-
-        NeoForge.EVENT_BUS.register(this)
         modEventBus.addListener(::addCreative)
-
+        CREATIVE_MODE_TABS.register(modEventBus)
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC)
     }
 
@@ -132,15 +129,8 @@ class MethilMoreOres {
         })
     }
 
-    // Add the example block item to the building blocks tab
     private fun addCreative(event: BuildCreativeModeTabContentsEvent) {
         if (event.tabKey === CreativeModeTabs.BUILDING_BLOCKS) event.accept(METHIL_ORE_BLOCK_ITEM)
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    fun onServerStarting(event: ServerStartingEvent) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting")
-    }
 }
