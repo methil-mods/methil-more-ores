@@ -54,28 +54,27 @@ class MethilMoreOres {
         val CREATIVE_MODE_TABS: DeferredRegister<CreativeModeTab> =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID)
 
-        val EXAMPLE_BLOCK: DeferredBlock<Block> =
-            BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE))
+        val METHIL_ORE_BLOCK: DeferredBlock<Block> =
+            BLOCKS.registerSimpleBlock("methil_ore", BlockBehaviour.Properties.of().mapColor(MapColor.STONE))
 
-        val EXAMPLE_BLOCK_ITEM: DeferredItem<BlockItem> = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK)
+        val METHIL_ORE_BLOCK_ITEM: DeferredItem<BlockItem> = ITEMS.registerSimpleBlockItem("methil_ore", METHIL_ORE_BLOCK)
 
-        val EXAMPLE_ITEM: DeferredItem<Item> = ITEMS.registerSimpleItem(
-            "example_item", Item.Properties().food(
+        val METHIL_ITEM: DeferredItem<Item> = ITEMS.registerSimpleItem(
+            "methil", Item.Properties().food(
                 FoodProperties.Builder()
                     .alwaysEdible().nutrition(1).saturationModifier(2f).build()
             )
         )
 
-        // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
         val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register("example_tab",
             Supplier {
                 CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.methil.methilmoreores")) //The language key for the title of your CreativeModeTab
                     .withTabsBefore(CreativeModeTabs.COMBAT)
-                    .icon { EXAMPLE_ITEM.get().defaultInstance }
+                    .icon { METHIL_ITEM.get().defaultInstance }
                     .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
-                        output.accept(EXAMPLE_ITEM.get())
-                        output.accept(EXAMPLE_BLOCK_ITEM.get()) // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                        output.accept(METHIL_ITEM.get())
+                        output.accept(METHIL_ORE_BLOCK_ITEM.get()) // Add the example item to the tab. For your own tabs, this method is preferred over the event
                     }.build()
             })
 
@@ -132,7 +131,7 @@ class MethilMoreOres {
 
     // Add the example block item to the building blocks tab
     private fun addCreative(event: BuildCreativeModeTabContentsEvent) {
-        if (event.tabKey === CreativeModeTabs.BUILDING_BLOCKS) event.accept(EXAMPLE_BLOCK_ITEM)
+        if (event.tabKey === CreativeModeTabs.BUILDING_BLOCKS) event.accept(METHIL_ORE_BLOCK_ITEM)
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
