@@ -1,5 +1,12 @@
 package com.methil.methilmoreores
 
+import com.methil.methilmoreores.block.MethilBlock
+import com.methil.methilmoreores.item.MethilItem
+import com.methil.methilmoreores.item.MethilItem.ITEMS
+import com.methil.methilmoreores.item.MethilItem.METHIL_ITEM
+import com.methil.methilmoreores.item.MethilItem.METHIL_ORE_BLOCK_ITEM
+import com.methil.methilmoreores.item.MethilItem.METHIL_PICKAXE
+import com.methil.methilmoreores.item.MethilItem.METHIL_SWORD
 import com.mojang.logging.LogUtils
 import net.minecraft.client.Minecraft
 import net.minecraft.core.registries.BuiltInRegistries
@@ -7,11 +14,7 @@ import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.*
 import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
-import net.minecraft.world.item.crafting.Ingredient
-import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.level.block.state.BlockBehaviour
-import net.minecraft.world.level.material.MapColor
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.bus.api.SubscribeEvent
@@ -21,13 +24,8 @@ import net.neoforged.fml.common.Mod
 import net.neoforged.fml.config.ModConfig
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
-import net.neoforged.neoforge.common.NeoForge
-import net.neoforged.neoforge.common.SimpleTier
-import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
-import net.neoforged.neoforge.registries.DeferredBlock
 import net.neoforged.neoforge.registries.DeferredHolder
-import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Consumer
 import java.util.function.Supplier
@@ -37,40 +35,11 @@ import java.util.function.Supplier
 class MethilMoreOres// Register the commonSetup method for modloading
     (modEventBus: IEventBus, modContainer: ModContainer) {
     companion object {
-
         const val MODID = "methilmoreores"
 
         private val LOGGER = LogUtils.getLogger();
-
-        val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(
-            MODID
-        )
-        val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(
-            MODID
-        )
         val CREATIVE_MODE_TABS: DeferredRegister<CreativeModeTab> =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID)
-
-        // Register block and ore
-        val METHIL_ORE_BLOCK: DeferredBlock<Block> =
-            BLOCKS.registerSimpleBlock("methil_ore", BlockBehaviour.Properties.of().mapColor(MapColor.STONE))
-        val METHIL_ORE_BLOCK_ITEM: DeferredItem<BlockItem> = ITEMS.registerSimpleBlockItem("methil_ore", METHIL_ORE_BLOCK)
-
-        val METHIL_ITEM: DeferredItem<Item> = ITEMS.registerSimpleItem(
-            "methil", Item.Properties().rarity(Rarity.EPIC)
-            )
-
-        val METHIL_TIER = SimpleTier(
-            Tags.Blocks.ORES,
-            1900,
-            9f,
-            5.5f,
-            26,
-            Supplier { Ingredient.of(METHIL_ITEM) }
-        )
-
-        val METHIL_SWORD = ITEMS.register("methil_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
-        val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)) } )
 
         val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register("creative_tab",
             Supplier {
@@ -100,9 +69,9 @@ class MethilMoreOres// Register the commonSetup method for modloading
 
     init {
         modEventBus.addListener(::commonSetup)
-        BLOCKS.register(modEventBus)
-        ITEMS.register(modEventBus)
-        
+        MethilBlock.register(modEventBus)
+        MethilItem.register(modEventBus)
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
