@@ -2,8 +2,12 @@ package com.methil.methilmoreores.tab
 
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.item.MethilItem.ITEMS
+import com.methil.methilmoreores.item.MethilItem.METHIL_BOOTS
+import com.methil.methilmoreores.item.MethilItem.METHIL_CHESTPLATE
 import com.methil.methilmoreores.item.MethilItem.METHIL_DOUBLE_PICKAXE
+import com.methil.methilmoreores.item.MethilItem.METHIL_HELMET
 import com.methil.methilmoreores.item.MethilItem.METHIL_ITEM
+import com.methil.methilmoreores.item.MethilItem.METHIL_LEGGINGS
 import com.methil.methilmoreores.item.MethilItem.METHIL_ORE_BLOCK_ITEM
 import com.methil.methilmoreores.item.MethilItem.METHIL_PICKAXE
 import com.methil.methilmoreores.item.MethilItem.METHIL_SWORD
@@ -35,6 +39,10 @@ object CreativeTab {
                     output.accept(METHIL_SWORD.get())
                     output.accept(METHIL_PICKAXE.get())
                     output.accept(METHIL_DOUBLE_PICKAXE.get())
+                    output.accept(METHIL_HELMET.get())
+                    output.accept(METHIL_CHESTPLATE.get())
+                    output.accept(METHIL_LEGGINGS.get())
+                    output.accept(METHIL_BOOTS.get())
                 }.build()
         })
 
