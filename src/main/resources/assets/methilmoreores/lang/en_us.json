@@ -5,5 +5,9 @@
   "item.methilmoreores.methil_pickaxe": "Methil Pickaxe",
   "item.methilmoreores.methil_double_pickaxe": "Methil Double Pickaxe",
   "item.methilmoreores.methil_sword": "Methil Sword",
+  "item.methilmoreores.methil_helmet": "Methil Helmet",
+  "item.methilmoreores.methil_chestplate": "Methil Chestplate",
+  "item.methilmoreores.methil_leggings": "Methil Leggings",
+  "item.methilmoreores.methil_boots": "Methil Boots",
   "itemGroup.methil.methilmoreores": "Methil More Ores"
 }

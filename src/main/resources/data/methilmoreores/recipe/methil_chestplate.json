@@ -1,21 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
+  "category": "misc",
   "pattern": [
+    "M M",
     "MMM",
-    " S ",
-    " S "
+    "MMM"
   ],
   "key": {
     "M": {
       "item": "methilmoreores:methil"
-    },
-    "S": {
-      "item": "minecraft:stick"
     }
   },
   "result": {
     "count": 1,
-    "id": "methilmoreores:methil_pickaxe"
+    "id": "methilmoreores:methil_chestplate"
   }
 }
