@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " M ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "M": {
+      "item": "methilmoreores:methil"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "methilmoreores:methil_shovel"
+  }
+}

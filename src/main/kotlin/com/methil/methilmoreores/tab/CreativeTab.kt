@@ -2,14 +2,17 @@ package com.methil.methilmoreores.tab
 
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.item.MethilItem.ITEMS
+import com.methil.methilmoreores.item.MethilItem.METHIL_AXE
 import com.methil.methilmoreores.item.MethilItem.METHIL_BOOTS
 import com.methil.methilmoreores.item.MethilItem.METHIL_CHESTPLATE
 import com.methil.methilmoreores.item.MethilItem.METHIL_DOUBLE_PICKAXE
 import com.methil.methilmoreores.item.MethilItem.METHIL_HELMET
+import com.methil.methilmoreores.item.MethilItem.METHIL_HOE
 import com.methil.methilmoreores.item.MethilItem.METHIL_ITEM
 import com.methil.methilmoreores.item.MethilItem.METHIL_LEGGINGS
 import com.methil.methilmoreores.item.MethilItem.METHIL_ORE_BLOCK_ITEM
 import com.methil.methilmoreores.item.MethilItem.METHIL_PICKAXE
+import com.methil.methilmoreores.item.MethilItem.METHIL_SHOVEL
 import com.methil.methilmoreores.item.MethilItem.METHIL_SWORD
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
@@ -37,6 +40,9 @@ object CreativeTab {
                     output.accept(METHIL_ITEM.get())
                     output.accept(METHIL_ORE_BLOCK_ITEM.get())
                     output.accept(METHIL_SWORD.get())
+                    output.accept(METHIL_AXE.get())
+                    output.accept(METHIL_HOE.get())
+                    output.accept(METHIL_SHOVEL.get())
                     output.accept(METHIL_PICKAXE.get())
                     output.accept(METHIL_DOUBLE_PICKAXE.get())
                     output.accept(METHIL_HELMET.get())
