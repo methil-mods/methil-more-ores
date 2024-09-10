@@ -1,39 +1,41 @@
-# Kotlin MDK
+# Methil More Ores
 
-This is a fork of NeoForge's MDK that is configured to use Kotlin. The following modifications have been made:
-- Port existing Java code to Kotlin
-- Adjust necessary resources for running on Kotlin (i.e. depend on KFF)
-- Added an example Mixin to emphasize that Mixins should only be written in Java
-
-> [!NOTE]
-> The Kotlin experience is not very good in Eclipse. The original MDK may be made to work with Eclipse as well,
-> but if you want to use Kotlin, the best choice is IntelliJ IDEA with the Minecraft Development Plugin.
+![methil-more-ores-banner.png](readme%2Fmethil-more-ores-banner.png)
 
 ---
 
-Original README:
+## Overview
 
-Installation information
-=======
+- **Minecraft Version:** 1.21.1
+- **Mod Loader:** NeoForged
+- **Mod Version:** 1.0.0
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Features
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+- **Methil Ore:** A new, rare purple ore found in the deepest parts of the world, just after diamonds.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Installation
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+1. **Ensure NeoForged is Installed:** This mod requires NeoForged to run. Download and install NeoForged if you haven't already.
+2. **Download the Mod:** Get the latest version of the Methil Ore Mod from [insert download link here].
+3. **Place the Mod in the Mods Folder:** Move the downloaded mod file into the `mods` folder located in your Minecraft directory.
+4. **Launch Minecraft:** Start Minecraft with the NeoForged profile to load the mod.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Compatibility
+
+- **NeoForged:** Required for mod functionality.
+- **Other Mods:** Should work with most mods, but compatibility is not guaranteed. Report any issues on our GitHub page.
+
+## Troubleshooting
+
+- **Crashes or Errors:** Ensure that NeoForged is correctly installed and that the mod file is placed in the correct directory.
+- **Missing Features:** Make sure you have the correct version of the mod for Minecraft 1.21.1.
+
+## Contact & Support
+
+- **[GitHub Repository](https://github.com/IlanOu/methil-more-ores)**
+- **Issues & Bug Reports:** Please use the Issues tab on our GitHub page to report any problems or request features.
+
+Thank you for using the Methil More Ores Mod! We hope it adds a new level of excitement and challenge to your Minecraft adventures.
+
+Happy mining!
