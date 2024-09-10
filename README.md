@@ -8,7 +8,6 @@
 
 - **Minecraft Version:** 1.21.1
 - **Mod Loader:** NeoForged
-- **Mod Version:** 1.0.0
 
 ## Features
 
