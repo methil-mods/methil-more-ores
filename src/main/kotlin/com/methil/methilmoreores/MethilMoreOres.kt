@@ -1,7 +1,9 @@
 package com.methil.methilmoreores
 
 import com.methil.methilmoreores.block.MethilBlock
+import com.methil.methilmoreores.effect.MethilArmorEffect
 import com.methil.methilmoreores.item.MethilArmor
+import com.methil.methilmoreores.item.MethilArmorItem
 import com.methil.methilmoreores.item.MethilItem
 import com.methil.methilmoreores.tab.CreativeTab
 import com.methil.methilmoreores.tab.CreativeTab.addCreative
@@ -13,6 +15,8 @@ import net.neoforged.fml.ModContainer
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.config.ModConfig
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
+import net.neoforged.neoforge.common.NeoForge
+import net.neoforged.neoforge.common.NeoForge.EVENT_BUS
 import java.util.function.Consumer
 
 
@@ -36,6 +40,8 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
         MethilArmor.register(modEventBus)
         CreativeTab.register(modEventBus)
         modEventBus.addListener(::addCreative)
+
+
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.

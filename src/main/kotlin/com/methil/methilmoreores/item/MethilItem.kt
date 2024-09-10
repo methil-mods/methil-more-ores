@@ -56,28 +56,28 @@ object MethilItem {
 
 
     val METHIL_HELMET: Supplier<ArmorItem> = ITEMS.register("methil_helmet", Supplier {
-        ArmorItem(
+        MethilArmorItem(
             METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.HELMET,
             Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15)).rarity(Rarity.EPIC)
         )
     })
     val METHIL_CHESTPLATE: Supplier<ArmorItem> = ITEMS.register("methil_chestplate", Supplier {
-        ArmorItem(
+        MethilArmorItem(
             METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.CHESTPLATE,
             Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(15)).rarity(Rarity.EPIC)
         )
     })
     val METHIL_LEGGINGS: Supplier<ArmorItem> = ITEMS.register("methil_leggings", Supplier {
-        ArmorItem(
+        MethilArmorItem(
             METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.LEGGINGS,
             Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15)).rarity(Rarity.EPIC)
         )
     })
     val METHIL_BOOTS: Supplier<ArmorItem> = ITEMS.register("methil_boots", Supplier {
-        ArmorItem(
+        MethilArmorItem(
             METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.BOOTS,
             Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15)).rarity(Rarity.EPIC)
