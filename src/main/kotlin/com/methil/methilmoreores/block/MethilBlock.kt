@@ -1,5 +1,6 @@
 package com.methil.methilmoreores.block
 
+import com.google.common.base.Supplier
 import com.methil.methilmoreores.MethilMoreOres
 import com.methil.methilmoreores.MethilMoreOres.Companion
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
@@ -19,7 +20,10 @@ object MethilBlock {
     )
     public val METHIL_ORE_BLOCK: DeferredBlock<Block> =
         BLOCKS.registerSimpleBlock("methil_ore", BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
-            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST))
+            .strength(4f).requiresCorrectToolForDrops()
+            .destroyTime(3.0F)
+            .explosionResistance(10.0F)
+            .sound(SoundType.METAL))
 
     fun register(modEventBus: IEventBus){
         BLOCKS.register(modEventBus)

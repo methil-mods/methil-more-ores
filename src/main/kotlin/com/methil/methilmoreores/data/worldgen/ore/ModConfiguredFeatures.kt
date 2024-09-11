@@ -17,17 +17,16 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest
 import java.util.List
 
 object ModConfiguredFeatures {
-    internal var OVERWORLD_EXAMPLE_ORE: ResourceKey<ConfiguredFeature<*, *>> = createKey("overworld_methil_ore")
+    internal var OVERWORLD_METHIL_ORE: ResourceKey<ConfiguredFeature<*, *>> = createKey("overworld_methil_ore")
 
 
     fun bootstrap(context: BootstrapContext<ConfiguredFeature<*, *>>) {
         val stoneReplacable: RuleTest = TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES)
-        val deepslateReplacable: RuleTest = TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
 
-        val examplOre =
+        val methilOre =
             List.of<TargetBlockState>(OreConfiguration.target(stoneReplacable, METHIL_ORE_BLOCK.get().defaultBlockState()))
 
-        register(context, OVERWORLD_EXAMPLE_ORE, Feature.ORE, OreConfiguration(examplOre, 4))
+        register(context, OVERWORLD_METHIL_ORE, Feature.ORE, OreConfiguration(methilOre, 4))
     }
 
     private fun createKey(name: String): ResourceKey<ConfiguredFeature<*, *>> {

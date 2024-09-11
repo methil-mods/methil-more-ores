@@ -13,21 +13,20 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature
 import net.minecraft.world.level.levelgen.placement.PlacementModifier
 
 object ModPlacedFeatures {
-    var EXAMPLE_ORE: ResourceKey<PlacedFeature> = createKey("methil_ore")
+    var METHIL_ORE: ResourceKey<PlacedFeature> = createKey("methil_ore")
 
     fun bootstrap(context: BootstrapContext<PlacedFeature>) {
         val configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE)
 
         val holder: Holder<ConfiguredFeature<*, *>> =
-            configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_EXAMPLE_ORE)
+            configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_METHIL_ORE)
 
         register(
             context,
-            EXAMPLE_ORE,
+            METHIL_ORE,
             holder,
-            ModOrePlacement.commonOrePlacements(
-                3,
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(20))
+            ModOrePlacement.frequentOrePlacements(
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(200))
             )
         )
     }

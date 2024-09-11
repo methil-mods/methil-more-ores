@@ -13,11 +13,13 @@ import net.minecraft.world.level.levelgen.GenerationStep
 import net.neoforged.neoforge.common.world.BiomeModifier
 import net.neoforged.neoforge.common.world.BiomeModifiers.AddFeaturesBiomeModifier
 import net.neoforged.neoforge.registries.NeoForgeRegistries
+import com.methil.methilmoreores.MethilMoreOres.Companion.LOGGER
 
 object ModBiomesModifiers {
     internal var ADD_EXAMPLE_ORE: ResourceKey<BiomeModifier> = createKey("add_methil_ore")
 
     fun bootstrap(context: BootstrapContext<BiomeModifier>) {
+        LOGGER.info("Generate bioome modifier")
         val placedFeatures = context.lookup(Registries.PLACED_FEATURE)
         val biomes = context.lookup(Registries.BIOME)
 
@@ -26,7 +28,7 @@ object ModBiomesModifiers {
             AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(
-                    placedFeatures.getOrThrow(ModPlacedFeatures.EXAMPLE_ORE)),
+                    placedFeatures.getOrThrow(ModPlacedFeatures.METHIL_ORE)),
                     GenerationStep.Decoration.UNDERGROUND_ORES
                 )
             )
