@@ -1,9 +1,9 @@
 {
-  "feature": "methilmoreores:methil_ore",
+  "feature": "methilmoreores:overworld_methil_ore",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 30
+      "count": 3
     },
     {
       "type": "minecraft:in_square"
@@ -11,12 +11,12 @@
     {
       "type": "minecraft:height_range",
       "height": {
-        "type": "uniform",
-        "min_inclusive": {
-          "above_bottom": -63
-        },
+        "type": "minecraft:uniform",
         "max_inclusive": {
-          "below_top": 80
+          "absolute": 20
+        },
+        "min_inclusive": {
+          "absolute": -64
         }
       }
     },

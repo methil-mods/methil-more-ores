@@ -17,7 +17,7 @@ object MethilBlock {
     val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(
         MODID
     )
-    val METHIL_ORE_BLOCK: DeferredBlock<Block> =
+    public val METHIL_ORE_BLOCK: DeferredBlock<Block> =
         BLOCKS.registerSimpleBlock("methil_ore", BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST))
 

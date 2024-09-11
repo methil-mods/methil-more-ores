@@ -1,6 +1,7 @@
 package com.methil.methilmoreores
 
 import com.methil.methilmoreores.block.MethilBlock
+import com.methil.methilmoreores.data.DataGenerators
 import com.methil.methilmoreores.effect.MethilArmorEffect
 import com.methil.methilmoreores.item.MethilArmor
 import com.methil.methilmoreores.item.MethilArmorItem
@@ -40,6 +41,7 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
         MethilArmor.register(modEventBus)
         CreativeTab.register(modEventBus)
         modEventBus.addListener(::addCreative)
+        modEventBus.addListener(DataGenerators::gatherData)
 
 
 

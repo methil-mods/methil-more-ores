@@ -1,0 +1,19 @@
+package com.methil.methilmoreores.data
+
+import com.methil.methilmoreores.MethilMoreOres.Companion.LOGGER
+import com.methil.methilmoreores.data.worldgen.ModWorldGenProvider
+import net.neoforged.neoforge.data.event.GatherDataEvent
+
+object DataGenerators {
+    fun gatherData(event: GatherDataEvent) {
+        try {
+            LOGGER.info("Launch gathering data")
+            val generator = event.generator
+            val output = generator.packOutput
+
+            generator.addProvider(true, ModWorldGenProvider(output, event.lookupProvider))
+        } catch (e: RuntimeException) {
+            LOGGER.error("Failed to gather data", e)
+        }
+    }
+}
