@@ -25,8 +25,8 @@ object ModPlacedFeatures {
             context,
             METHIL_ORE,
             holder,
-            ModOrePlacement.frequentOrePlacements(
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(200))
+            ModOrePlacement.commonOrePlacements(
+                6, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(200))
             )
         )
     }

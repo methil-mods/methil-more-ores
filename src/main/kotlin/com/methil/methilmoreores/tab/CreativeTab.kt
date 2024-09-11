@@ -10,7 +10,6 @@ import com.methil.methilmoreores.item.MethilItem.METHIL_HELMET
 import com.methil.methilmoreores.item.MethilItem.METHIL_HOE
 import com.methil.methilmoreores.item.MethilItem.METHIL_ITEM
 import com.methil.methilmoreores.item.MethilItem.METHIL_LEGGINGS
-import com.methil.methilmoreores.item.MethilItem.METHIL_ORE_BLOCK_ITEM
 import com.methil.methilmoreores.item.MethilItem.METHIL_PICKAXE
 import com.methil.methilmoreores.item.MethilItem.METHIL_SHOVEL
 import com.methil.methilmoreores.item.MethilItem.METHIL_SWORD
@@ -38,7 +37,7 @@ object CreativeTab {
                 .icon { METHIL_ITEM.get().defaultInstance }
                 .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
                     output.accept(METHIL_ITEM.get())
-                    output.accept(METHIL_ORE_BLOCK_ITEM.get())
+                        // output.accept(METHIL_ORE_BLOCK_ITEM.get())
                     output.accept(METHIL_SWORD.get())
                     output.accept(METHIL_AXE.get())
                     output.accept(METHIL_HOE.get())
@@ -58,6 +57,6 @@ object CreativeTab {
     }
 
     fun addCreative(event: BuildCreativeModeTabContentsEvent) {
-        if (event.tabKey === CreativeModeTabs.BUILDING_BLOCKS) event.accept(METHIL_ORE_BLOCK_ITEM)
+        // if (event.tabKey === CreativeModeTabs.BUILDING_BLOCKS) event.accept(METHIL_ORE_BLOCK_ITEM)
     }
 }

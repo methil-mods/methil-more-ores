@@ -1,4 +1,7 @@
-// 1.21	2024-09-12T00:16:43.2440195	Registries
-6b612b5040921034de8f070c4bb6629077710140 data/methilmoreores/neoforge/biome_modifier/add_methil_ore.json
+// 1.21	2024-09-12T01:14:30.8508666	Registries
+ff186c3e59e10ab938f60f985772f07717ede99a data/methilmoreores/neoforge/biome_modifier/methil_add_ore_lake.json
+1e0e77047454fc9d1e904a463ca5fe58448dd2ab data/methilmoreores/neoforge/biome_modifier/methil_add_ore_stronghold.json
+6b612b5040921034de8f070c4bb6629077710140 data/methilmoreores/neoforge/biome_modifier/methil_add_ore_underground_ores.json
+cfdb6e3babeaf029d4b875a6134ee5d7894a9c83 data/methilmoreores/neoforge/biome_modifier/methil_add_ore_underground_struct.json
 7188647f335c3753f5393280fb316b6a3de6322c data/methilmoreores/worldgen/configured_feature/overworld_methil_ore.json
-d101e461dc0ddd2327f115cbbf55cf3c12864496 data/methilmoreores/worldgen/placed_feature/methil_ore.json
+99a539abcea41d5b949fc411c47bb70c958de8a8 data/methilmoreores/worldgen/placed_feature/methil_ore.json

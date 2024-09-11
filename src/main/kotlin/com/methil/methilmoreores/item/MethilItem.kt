@@ -17,7 +17,6 @@ object MethilItem {
     val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(
         MODID
     )
-    val METHIL_ORE_BLOCK_ITEM: DeferredItem<BlockItem> = ITEMS.registerSimpleBlockItem("methil_ore", METHIL_ORE_BLOCK)
 
     val METHIL_ITEM: DeferredItem<Item> = ITEMS.registerSimpleItem(
         "methil", Item.Properties().rarity(Rarity.EPIC)
