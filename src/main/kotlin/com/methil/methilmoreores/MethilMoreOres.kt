@@ -3,6 +3,7 @@ package com.methil.methilmoreores
 import com.methil.methilmoreores.block.MethilBlock
 import com.methil.methilmoreores.data.DataGenerators
 import com.methil.methilmoreores.effect.MethilArmorEffect
+import com.methil.methilmoreores.event.MethilEvents
 import com.methil.methilmoreores.item.MethilArmor
 import com.methil.methilmoreores.item.MethilArmorItem
 import com.methil.methilmoreores.item.MethilItem
@@ -42,6 +43,7 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
         CreativeTab.register(modEventBus)
         modEventBus.addListener(::addCreative)
         modEventBus.addListener(DataGenerators::gatherData)
+        NeoForge.EVENT_BUS.addListener(MethilEvents::addCustomTrades)
 
 
 
