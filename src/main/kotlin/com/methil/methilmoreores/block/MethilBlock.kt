@@ -25,6 +25,7 @@ object MethilBlock {
                 .destroyTime(3.0F)
                 .explosionResistance(10.0F)
                 .sound(SoundType.METAL)
+                .requiresCorrectToolForDrops()
             )
         } )
 
