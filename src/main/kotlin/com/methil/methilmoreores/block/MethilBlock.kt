@@ -25,14 +25,14 @@ object MethilBlock {
                 .destroyTime(3.0F)
                 .explosionResistance(10.0F)
                 .sound(SoundType.METAL)
-                .requiresCorrectToolForDrops())
+            )
         } )
 
     fun register(modEventBus: IEventBus){
         BLOCKS.register(modEventBus)
     }
 
-    fun registerBlock(name: String?, block: Supplier<Block>?): DeferredBlock<Block> {
+    fun registerBlock(name: String, block: Supplier<Block>): DeferredBlock<Block> {
         val blockReg = BLOCKS.register(name, block)
         ITEMS.registerSimpleBlockItem(blockReg)
         return blockReg
