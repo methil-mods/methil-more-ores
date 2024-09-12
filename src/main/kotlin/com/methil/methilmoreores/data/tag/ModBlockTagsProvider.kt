@@ -18,9 +18,9 @@ class ModBlockTagsProvider(
 ) :
     BlockTagsProvider(output, lookupProvider, MODID, existingFileHelper) {
     override fun addTags(pProvider: HolderLookup.Provider) {
+        LOGGER.info("Generate TAG")
         tag(TagsInit.BlockTagsInit.METHIL_ORE_TAG)
             .add(METHIL_ORE_BLOCK.get())
-
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .addTag(TagsInit.BlockTagsInit.METHIL_ORE_TAG)

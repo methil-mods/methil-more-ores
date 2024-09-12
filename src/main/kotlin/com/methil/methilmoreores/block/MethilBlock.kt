@@ -3,9 +3,12 @@ package com.methil.methilmoreores.block
 import com.google.common.base.Supplier
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.item.MethilItem.ITEMS
+import net.minecraft.tags.BlockTags
+import net.minecraft.util.valueproviders.UniformInt
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.DropExperienceBlock
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.material.MapColor
@@ -20,16 +23,20 @@ object MethilBlock {
         MODID
     )
     val METHIL_ORE_BLOCK: DeferredBlock<Block> =
-        registerBlock("methil_ore", Supplier {
-            Block(BlockBehaviour.Properties.of()
-                .destroyTime(3.0F)
+        registerBlock("methil_ore", {
+            DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                .destroyTime(3.0f)
                 .explosionResistance(10.0F)
                 .sound(SoundType.METAL)
+                .lightLevel { 5 }
                 .requiresCorrectToolForDrops()
+                .strength(3.0f, 10.0f)
             )
         } )
 
+
     fun register(modEventBus: IEventBus){
+
         BLOCKS.register(modEventBus)
     }
 

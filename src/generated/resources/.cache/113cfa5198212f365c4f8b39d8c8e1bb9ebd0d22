@@ -1,0 +1,4 @@
+// 1.21	2024-09-12T19:46:02.4306532	Tags for minecraft:block mod id methilmoreores
+95943b226657bd3023d10a9f57f37c11605c1ff9 data/methilmoreores/tags/block/ores/methil_ore.json
+8f3c1e1942d51da789f5137843583a671c434427 data/minecraft/tags/block/mineable/pickaxe.json
+8f3c1e1942d51da789f5137843583a671c434427 data/minecraft/tags/block/needs_iron_tool.json

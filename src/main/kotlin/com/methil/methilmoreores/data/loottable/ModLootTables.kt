@@ -17,17 +17,9 @@ import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 import java.util.stream.Collectors
 
-class ModLootTables(pOutput: PackOutput?, pRegistries: CompletableFuture<HolderLookup.Provider?>?) :
+class ModLootTables(pOutput: PackOutput, pRegistries: CompletableFuture<HolderLookup.Provider>) :
     LootTableProvider(
-        pOutput, setOf<ResourceKey<LootTable>>(), List.of<SubProviderEntry>(
-            SubProviderEntry(
-                { p_344943_: HolderLookup.Provider? ->
-                    ModBlockLootTables(
-                        p_344943_!!
-                    )
-                }, LootContextParamSets.BLOCK
-            )
-        ), pRegistries
+        pOutput, setOf(), List.of(SubProviderEntry(::ModBlockLootTables, LootContextParamSets.BLOCK)), pRegistries
     ) {
     override fun validate(
         writableregistry: WritableRegistry<LootTable>,

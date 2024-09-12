@@ -24,8 +24,7 @@ object ModConfiguredFeatures {
     fun bootstrap(context: BootstrapContext<ConfiguredFeature<*, *>>) {
         val stoneReplacable: RuleTest = TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES)
 
-        val methilOre =
-            List.of<TargetBlockState>(OreConfiguration.target(stoneReplacable, METHIL_ORE_BLOCK.get().defaultBlockState()))
+        val methilOre = List.of(OreConfiguration.target(stoneReplacable, METHIL_ORE_BLOCK.get().defaultBlockState()))
 
         register(context, OVERWORLD_METHIL_ORE, Feature.ORE, OreConfiguration(methilOre, 4))
     }

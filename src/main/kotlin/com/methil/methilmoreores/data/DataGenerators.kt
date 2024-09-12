@@ -16,6 +16,7 @@ object DataGenerators {
             val existingFileHelper = event.existingFileHelper
 
             val modBlockTagsProvider = ModBlockTagsProvider(output, event.lookupProvider, existingFileHelper)
+            generator.addProvider(true, modBlockTagsProvider);
             generator.addProvider(true, ModLootTables(output, event.lookupProvider))
             generator.addProvider(true, ModWorldGenProvider(output, event.lookupProvider))
         } catch (e: RuntimeException) {
