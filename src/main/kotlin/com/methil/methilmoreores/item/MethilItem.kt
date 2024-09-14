@@ -4,6 +4,7 @@ import com.methil.methilmoreores.block.MethilBlock.METHIL_ORE_BLOCK
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.item.MethilArmor.METHIL_ARMOR_MATERIAL
 import com.methil.methilmoreores.item.custom.MethilDoublePickaxe
+import com.methil.methilmoreores.item.custom.MethilLongStickSword
 import net.minecraft.world.item.*
 import net.minecraft.world.item.crafting.Ingredient
 import net.neoforged.bus.api.IEventBus
@@ -41,7 +42,7 @@ object MethilItem {
             )
         )) } )
 
-    val METHIL_LONG_STICK_SWORD = ITEMS.register("methil_long_stick_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)
+    val METHIL_LONG_STICK_SWORD = ITEMS.register("methil_long_stick_sword", Supplier { MethilLongStickSword(Item.Properties().rarity(Rarity.EPIC)
         .attributes(
             SwordItem.createAttributes(
                 METHIL_TIER,

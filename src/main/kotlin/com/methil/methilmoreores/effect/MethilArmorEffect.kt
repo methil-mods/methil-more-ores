@@ -14,7 +14,6 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent
  * The idea between this class is after every player tick, check if the player have
  * a full set of Methil, if yes, it just applies the Absorption effect that gives 4 new hearts !
  */
-@EventBusSubscriber(modid = MethilMoreOres.MODID)
 object MethilArmorEffect {
     private fun isWearingFullMethilArmor(player: Player): Boolean {
         val helmet = player.getItemBySlot(EquipmentSlot.HEAD).item
@@ -29,7 +28,7 @@ object MethilArmorEffect {
     }
 
     @SubscribeEvent
-    fun onPlayerTick(event: PlayerTickEvent.Post) {
+    public fun onPlayerTick(event: PlayerTickEvent.Post) {
         val player = event.entity ?: return
 
         if (isWearingFullMethilArmor(player)) {

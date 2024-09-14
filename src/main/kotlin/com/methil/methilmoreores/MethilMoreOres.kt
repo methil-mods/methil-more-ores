@@ -7,6 +7,7 @@ import com.methil.methilmoreores.event.MethilEvents
 import com.methil.methilmoreores.item.MethilArmor
 import com.methil.methilmoreores.item.MethilArmorItem
 import com.methil.methilmoreores.item.MethilItem
+import com.methil.methilmoreores.item.custom.MethilLongStickSword
 import com.methil.methilmoreores.tab.CreativeTab
 import com.methil.methilmoreores.tab.CreativeTab.addCreative
 import com.mojang.logging.LogUtils
@@ -43,7 +44,9 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
         CreativeTab.register(modEventBus)
         modEventBus.addListener(::addCreative)
         modEventBus.addListener(DataGenerators::gatherData)
-        NeoForge.EVENT_BUS.addListener(MethilEvents::addCustomTrades)
+        EVENT_BUS.addListener(MethilEvents::addCustomTrades)
+        EVENT_BUS.addListener(MethilLongStickSword::onPlayerTick)
+        EVENT_BUS.addListener(MethilArmorEffect::onPlayerTick)
 
 
 
