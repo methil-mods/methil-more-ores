@@ -1,18 +1,10 @@
-package com.methil.methilmoreores.item.custom
+package com.methil.methilmoreores.item.methil.custom
 
-import com.methil.methilmoreores.MethilMoreOres
-import com.methil.methilmoreores.MethilMoreOres.Companion.LOGGER
-import com.methil.methilmoreores.item.MethilItem.METHIL_TIER
-import net.minecraft.world.InteractionHand
-import net.minecraft.world.InteractionResultHolder
-import net.minecraft.world.entity.ai.attributes.AttributeModifier
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_TIER
 import net.minecraft.world.entity.ai.attributes.Attributes.ENTITY_INTERACTION_RANGE
 import net.minecraft.world.entity.player.Player
-import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.SwordItem
-import net.minecraft.world.level.Level
 import net.neoforged.bus.api.SubscribeEvent
-import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.event.tick.PlayerTickEvent
 
 class MethilLongStickSword  // Constructor for the custom sword

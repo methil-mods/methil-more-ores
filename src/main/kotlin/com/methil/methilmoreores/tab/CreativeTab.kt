@@ -2,9 +2,9 @@ package com.methil.methilmoreores.tab
 
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.block.MethilBlock
-import com.methil.methilmoreores.item.MethilItem
-import com.methil.methilmoreores.item.MethilItem.ITEMS
-import com.methil.methilmoreores.item.MethilItem.METHIL_ITEM
+import com.methil.methilmoreores.item.emerald.EmeraldItem
+import com.methil.methilmoreores.item.methil.MethilItem
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_ITEM
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
@@ -31,7 +31,12 @@ object CreativeTab {
                 .icon { METHIL_ITEM.get().defaultInstance }
                 .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
                     val addedItems = HashSet<Item>()
-                    ITEMS.getEntries()
+                    EmeraldItem.ITEMS.getEntries()
+                        .stream()
+                        .map { item -> item.get().asItem() }
+                        .filter(addedItems::add)
+                        .forEach(output::accept)
+                    MethilItem.ITEMS.getEntries()
                         .stream()
                         .map { item -> item.get().asItem() }
                         .filter(addedItems::add)
@@ -43,7 +48,6 @@ object CreativeTab {
                         .forEach(output::accept)
                 }.build()
         })
-
 
     fun register(modEventBus: IEventBus){
         CREATIVE_MODE_TABS.register(modEventBus)

@@ -2,17 +2,17 @@ package com.methil.methilmoreores.data.recipes.provider
 
 
 import com.methil.methilmoreores.data.recipes.MethilRecipeProvider
-import com.methil.methilmoreores.item.MethilItem
-import com.methil.methilmoreores.item.MethilItem.METHIL_AXE
-import com.methil.methilmoreores.item.MethilItem.METHIL_BOOTS
-import com.methil.methilmoreores.item.MethilItem.METHIL_CHESTPLATE
-import com.methil.methilmoreores.item.MethilItem.METHIL_DOUBLE_PICKAXE
-import com.methil.methilmoreores.item.MethilItem.METHIL_HELMET
-import com.methil.methilmoreores.item.MethilItem.METHIL_HOE
-import com.methil.methilmoreores.item.MethilItem.METHIL_LEGGINGS
-import com.methil.methilmoreores.item.MethilItem.METHIL_PICKAXE
-import com.methil.methilmoreores.item.MethilItem.METHIL_SHOVEL
-import com.methil.methilmoreores.item.MethilItem.METHIL_SWORD
+import com.methil.methilmoreores.item.methil.MethilItem
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_AXE
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_BOOTS
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_CHESTPLATE
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_DOUBLE_PICKAXE
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_HELMET
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_HOE
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_LEGGINGS
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_PICKAXE
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_SHOVEL
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_SWORD
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.DataGenerator
 import net.minecraft.data.recipes.RecipeCategory
@@ -21,12 +21,11 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder
 import net.minecraft.world.item.Items.STICK
 import java.util.concurrent.CompletableFuture
 
-class NormalCraftingTableRecipeProvider(
+class MethilNormalCraftingTableRecipeProvider(
     generator: DataGenerator,
     pRegistries: CompletableFuture<HolderLookup.Provider>,
     private val recipeOutput: RecipeOutput
-) :
-    MethilRecipeProvider(generator, pRegistries) {
+) : MethilRecipeProvider(generator, pRegistries) {
     fun build() {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, METHIL_SHOVEL.get(), 1)
             .pattern(" # ")

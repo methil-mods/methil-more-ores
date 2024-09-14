@@ -1,17 +1,14 @@
-package com.methil.methilmoreores.item
+package com.methil.methilmoreores.item.methil
 
 import com.methil.methilmoreores.MethilMoreOres
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
-import com.methil.methilmoreores.item.MethilItem.ITEMS
 import net.minecraft.Util
 import net.minecraft.core.registries.Registries
-import net.minecraft.resources.ResourceLocation
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.item.ArmorItem
 import net.minecraft.world.item.ArmorMaterial
 import net.minecraft.world.item.crafting.Ingredient
 import net.neoforged.bus.api.IEventBus
-import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion.MOD_ID
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.*
 import java.util.function.Supplier

@@ -1,17 +1,12 @@
 package com.methil.methilmoreores.event
 
-import com.methil.methilmoreores.MethilMoreOres
-import com.methil.methilmoreores.MethilMoreOres.Companion.LOGGER
-import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
-import com.methil.methilmoreores.item.MethilItem
+import com.methil.methilmoreores.item.methil.MethilItem
 import net.minecraft.util.RandomSource
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.npc.VillagerProfession
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing
-import net.minecraft.world.item.EnchantedBookItem
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
-import net.minecraft.world.item.enchantment.EnchantmentInstance
 import net.minecraft.world.item.trading.ItemCost
 import net.minecraft.world.item.trading.MerchantOffer
 import net.neoforged.bus.api.SubscribeEvent

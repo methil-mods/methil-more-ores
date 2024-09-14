@@ -13,5 +13,16 @@
   "item.methilmoreores.methil_chestplate": "Methil Chestplate",
   "item.methilmoreores.methil_leggings": "Methil Leggings",
   "item.methilmoreores.methil_boots": "Methil Boots",
+
+  "item.methilmoreores.emerald_pickaxe": "Emerald Pickaxe",
+  "item.methilmoreores.emerald_shovel": "Emerald Shovel",
+  "item.methilmoreores.emerald_axe": "Emerald Axe",
+  "item.methilmoreores.emerald_hoe": "Emerald Hoe",
+  "item.methilmoreores.emerald_sword": "Emerald Sword",
+  "item.methilmoreores.emerald_helmet": "Emerald Helmet",
+  "item.methilmoreores.emerald_chestplate": "Emerald Chestplate",
+  "item.methilmoreores.emerald_leggings": "Emerald Leggings",
+  "item.methilmoreores.emerald_boots": "Emerald Boots",
+
   "itemGroup.methil.methilmoreores": "Methil More Ores"
 }

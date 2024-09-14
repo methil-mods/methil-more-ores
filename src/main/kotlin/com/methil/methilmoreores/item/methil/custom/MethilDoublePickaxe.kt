@@ -1,22 +1,18 @@
-package com.methil.methilmoreores.item.custom
+package com.methil.methilmoreores.item.methil.custom
 
-import com.methil.methilmoreores.item.MethilItem.METHIL_TIER
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_TIER
 import net.minecraft.core.BlockPos
-import net.minecraft.core.Direction
-import net.minecraft.core.component.DataComponents
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.PickaxeItem
-import net.minecraft.world.item.component.Tool
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.gameevent.GameEvent
-import net.minecraft.world.phys.Vec3
 
 
 class MethilDoublePickaxe(properties: Properties) : PickaxeItem(METHIL_TIER, properties) {

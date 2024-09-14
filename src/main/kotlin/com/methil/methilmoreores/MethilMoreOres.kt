@@ -4,10 +4,11 @@ import com.methil.methilmoreores.block.MethilBlock
 import com.methil.methilmoreores.data.DataGenerators
 import com.methil.methilmoreores.effect.MethilArmorEffect
 import com.methil.methilmoreores.event.MethilEvents
-import com.methil.methilmoreores.item.MethilArmor
-import com.methil.methilmoreores.item.MethilArmorItem
-import com.methil.methilmoreores.item.MethilItem
-import com.methil.methilmoreores.item.custom.MethilLongStickSword
+import com.methil.methilmoreores.item.emerald.EmeraldArmor
+import com.methil.methilmoreores.item.emerald.EmeraldItem
+import com.methil.methilmoreores.item.methil.MethilArmor
+import com.methil.methilmoreores.item.methil.MethilItem
+import com.methil.methilmoreores.item.methil.custom.MethilLongStickSword
 import com.methil.methilmoreores.tab.CreativeTab
 import com.methil.methilmoreores.tab.CreativeTab.addCreative
 import com.mojang.logging.LogUtils
@@ -18,7 +19,6 @@ import net.neoforged.fml.ModContainer
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.config.ModConfig
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
-import net.neoforged.neoforge.common.NeoForge
 import net.neoforged.neoforge.common.NeoForge.EVENT_BUS
 import java.util.function.Consumer
 
@@ -38,9 +38,16 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
 
     init {
         modEventBus.addListener(::commonSetup)
+
+        // Methil register
         MethilBlock.register(modEventBus)
         MethilItem.register(modEventBus)
         MethilArmor.register(modEventBus)
+
+        // Emerald register
+        EmeraldItem.register(modEventBus)
+        EmeraldArmor.register(modEventBus)
+
         CreativeTab.register(modEventBus)
         modEventBus.addListener(::addCreative)
         modEventBus.addListener(DataGenerators::gatherData)

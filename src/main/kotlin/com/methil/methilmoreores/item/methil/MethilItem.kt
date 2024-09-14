@@ -1,10 +1,9 @@
-package com.methil.methilmoreores.item
+package com.methil.methilmoreores.item.methil
 
-import com.methil.methilmoreores.block.MethilBlock.METHIL_ORE_BLOCK
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
-import com.methil.methilmoreores.item.MethilArmor.METHIL_ARMOR_MATERIAL
-import com.methil.methilmoreores.item.custom.MethilDoublePickaxe
-import com.methil.methilmoreores.item.custom.MethilLongStickSword
+import com.methil.methilmoreores.item.methil.MethilArmor.METHIL_ARMOR_MATERIAL
+import com.methil.methilmoreores.item.methil.custom.MethilDoublePickaxe
+import com.methil.methilmoreores.item.methil.custom.MethilLongStickSword
 import net.minecraft.world.item.*
 import net.minecraft.world.item.crafting.Ingredient
 import net.neoforged.bus.api.IEventBus
@@ -12,7 +11,6 @@ import net.neoforged.neoforge.common.SimpleTier
 import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
-import java.util.*
 import java.util.function.Supplier
 
 object MethilItem {
@@ -33,7 +31,8 @@ object MethilItem {
         Supplier { Ingredient.of(METHIL_ITEM) }
     )
 
-    val METHIL_SWORD = ITEMS.register("methil_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)
+    val METHIL_SWORD = ITEMS.register("methil_sword", Supplier { SwordItem(
+        METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)
         .attributes(
             SwordItem.createAttributes(
                 METHIL_TIER,
@@ -51,19 +50,23 @@ object MethilItem {
             )
         )) } )
 
-    val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties()
+    val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(
+        METHIL_TIER, Item.Properties()
         .rarity(Rarity.EPIC).attributes(PickaxeItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
 
     val METHIL_DOUBLE_PICKAXE = ITEMS.register("methil_double_pickaxe", Supplier { MethilDoublePickaxe(Item.Properties()
         .rarity(Rarity.EPIC).attributes(PickaxeItem.createAttributes(METHIL_TIER, 2f, -2.8f))) } )
 
-    val METHIL_AXE = ITEMS.register("methil_axe", Supplier { AxeItem(METHIL_TIER, Item.Properties()
+    val METHIL_AXE = ITEMS.register("methil_axe", Supplier { AxeItem(
+        METHIL_TIER, Item.Properties()
         .rarity(Rarity.EPIC).attributes(AxeItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
 
-    val METHIL_HOE = ITEMS.register("methil_hoe", Supplier { HoeItem(METHIL_TIER, Item.Properties()
+    val METHIL_HOE = ITEMS.register("methil_hoe", Supplier { HoeItem(
+        METHIL_TIER, Item.Properties()
         .rarity(Rarity.EPIC).attributes(HoeItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
 
-    val METHIL_SHOVEL = ITEMS.register("methil_shovel", Supplier { ShovelItem(METHIL_TIER, Item.Properties()
+    val METHIL_SHOVEL = ITEMS.register("methil_shovel", Supplier { ShovelItem(
+        METHIL_TIER, Item.Properties()
         .rarity(Rarity.EPIC).attributes(ShovelItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
 
     val METHIL_HELMET: Supplier<ArmorItem> = ITEMS.register("methil_helmet", Supplier {

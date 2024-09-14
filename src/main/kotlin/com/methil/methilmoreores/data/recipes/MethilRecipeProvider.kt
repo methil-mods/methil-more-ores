@@ -1,8 +1,9 @@
 package com.methil.methilmoreores.data.recipes
 
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
+import com.methil.methilmoreores.data.recipes.provider.EmeraldNormalCraftingTableRecipeProvider
 import com.methil.methilmoreores.data.recipes.provider.FurnaceRecipeProvider
-import com.methil.methilmoreores.data.recipes.provider.NormalCraftingTableRecipeProvider
+import com.methil.methilmoreores.data.recipes.provider.MethilNormalCraftingTableRecipeProvider
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.DataGenerator
 import net.minecraft.data.recipes.RecipeOutput
@@ -17,7 +18,8 @@ open class MethilRecipeProvider(
 ) :
     RecipeProvider(generator.packOutput, registries) {
     override fun buildRecipes(pRecipeOutput: RecipeOutput) {
-        NormalCraftingTableRecipeProvider(generator, registries, pRecipeOutput).build()
+        MethilNormalCraftingTableRecipeProvider(generator, registries, pRecipeOutput).build()
+        EmeraldNormalCraftingTableRecipeProvider(generator, registries, pRecipeOutput).build()
         FurnaceRecipeProvider(generator, registries, pRecipeOutput).build()
     }
 

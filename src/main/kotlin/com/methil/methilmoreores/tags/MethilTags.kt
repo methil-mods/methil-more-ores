@@ -34,12 +34,6 @@ object MethilTags {
         )
     }
 
-    object ItemTagsInit {
-        // Items
-        val METHIL_ORE_TAG: TagKey<Item> = ItemTags.create(createOreLocation("methil_ore"))
-
-    }
-
     object BlockTagsInit {
         val METHIL_ORE_TAG: TagKey<Block> = BlockTags.create(createOreLocation("methil_ore"))
     }

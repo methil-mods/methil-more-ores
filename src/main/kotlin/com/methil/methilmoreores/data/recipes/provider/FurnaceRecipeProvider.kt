@@ -3,7 +3,7 @@ package com.methil.methilmoreores.data.recipes.provider
 
 import com.methil.methilmoreores.block.MethilBlock
 import com.methil.methilmoreores.data.recipes.MethilRecipeProvider
-import com.methil.methilmoreores.item.MethilItem
+import com.methil.methilmoreores.item.methil.MethilItem
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.DataGenerator
 import net.minecraft.data.recipes.RecipeCategory
