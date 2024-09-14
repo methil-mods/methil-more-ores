@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "pattern": [
-    "MMM",
-    "M M",
-    "M M"
-  ],
+  "category": "equipment",
   "key": {
-    "M": {
+    "#": {
       "item": "methilmoreores:methil"
     }
   },
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
   "result": {
     "count": 1,
     "id": "methilmoreores:methil_leggings"

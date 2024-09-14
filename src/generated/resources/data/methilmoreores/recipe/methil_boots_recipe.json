@@ -1,21 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
-  "pattern": [
-    "MM ",
-    "MS ",
-    " S "
-  ],
   "key": {
-    "M": {
+    "#": {
       "item": "methilmoreores:methil"
-    },
-    "S": {
-      "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    "# #",
+    "# #"
+  ],
   "result": {
     "count": 1,
-    "id": "methilmoreores:methil_axe"
+    "id": "methilmoreores:methil_boots"
   }
 }
