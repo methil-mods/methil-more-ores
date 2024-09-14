@@ -41,6 +41,15 @@ object MethilItem {
             )
         )) } )
 
+    val METHIL_LONG_STICK_SWORD = ITEMS.register("methil_long_stick_sword", Supplier { SwordItem(METHIL_TIER, Item.Properties().rarity(Rarity.EPIC)
+        .attributes(
+            SwordItem.createAttributes(
+                METHIL_TIER,
+                4.5f,
+                -1f
+            )
+        )) } )
+
     val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties()
         .rarity(Rarity.EPIC).attributes(PickaxeItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
 

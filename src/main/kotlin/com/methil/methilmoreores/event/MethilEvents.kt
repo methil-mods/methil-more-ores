@@ -21,23 +21,27 @@ import net.neoforged.neoforge.event.village.VillagerTradesEvent
 object MethilEvents {
     @SubscribeEvent
     fun addCustomTrades(event: VillagerTradesEvent) {
-        if(event.getType() == VillagerProfession.MASON) {
-            LOGGER.warn("RECEIVE AN EVENT FOR MASON VILLAGER")
+        if(event.type == VillagerProfession.MASON) {
             val trades = event.trades
-            // Add on level three a possible merchent offer with MethilItem
-            // TODO : Test it !
             trades[3].add(ItemListing { pTrader: Entity?, pRandom: RandomSource? ->
                 MerchantOffer(
                     ItemCost(Items.EMERALD, 12),
                     ItemStack(MethilItem.METHIL_ITEM.get(), 2),
-                    10, 8, 0.02f
+                    7, 8, 0.02f
                 )
             })
         }
 
-
-
-
+        if(event.type == VillagerProfession.WEAPONSMITH) {
+            val trades = event.trades
+            trades[4].add(ItemListing { pTrader: Entity?, pRandom: RandomSource? ->
+                MerchantOffer(
+                    ItemCost(Items.EMERALD, 21),
+                    ItemStack(MethilItem.METHIL_LONG_STICK_SWORD.get(), 1),
+                    3, 8, 0.02f
+                )
+            })
+        }
     }
 }
 
