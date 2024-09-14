@@ -38,10 +38,23 @@ class MethilDoublePickaxe(properties: Properties) : PickaxeItem(METHIL_TIER, pro
 
     private fun breakOtherBlock(stack: ItemStack, level: Level, pos: BlockPos, miningEntity: LivingEntity) {
         val direction = miningEntity.nearestViewDirection
-        var currentPos = pos
-
-        for (x in -1..1) {
+        // TODO : Update this code, it's a bit shitty
+        // First part, destroy the block behind
+        var currentPos : BlockPos = pos
+        currentPos = BlockPos(currentPos.x, currentPos.y-1, currentPos.z)
+        val state = level.getBlockState(currentPos)
+        if (state.block !== Blocks.AIR) {
+            val blockEntity: BlockEntity? = level.getBlockEntity(currentPos)
+            val block: Block = state.block
+            block.playerDestroy(level, miningEntity as Player, pos, state, blockEntity, stack)
+            level.removeBlock(currentPos, false)
+            level.gameEvent(GameEvent.BLOCK_DESTROY, currentPos, GameEvent.Context.of(state))
+        }
+        // Second part, destroy the 2 blocks behind
+        for (i in 0..1){
+            var currentPos : BlockPos = pos
             currentPos = currentPos.relative(direction)
+            currentPos = BlockPos(currentPos.x, currentPos.y-i, currentPos.z)
             val state = level.getBlockState(currentPos)
             if (state.block !== Blocks.AIR) {
                 val blockEntity: BlockEntity? = level.getBlockEntity(currentPos)
@@ -51,5 +64,7 @@ class MethilDoublePickaxe(properties: Properties) : PickaxeItem(METHIL_TIER, pro
                 level.gameEvent(GameEvent.BLOCK_DESTROY, currentPos, GameEvent.Context.of(state))
             }
         }
+
+
     }
 }
