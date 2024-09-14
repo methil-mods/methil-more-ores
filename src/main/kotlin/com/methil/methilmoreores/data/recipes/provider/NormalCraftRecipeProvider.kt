@@ -1,7 +1,6 @@
 package com.methil.methilmoreores.data.recipes.provider
 
 
-import com.methil.methilmoreores.data.init.TagsInit
 import com.methil.methilmoreores.data.recipes.MethilRecipeProvider
 import com.methil.methilmoreores.item.MethilItem
 import com.methil.methilmoreores.item.MethilItem.METHIL_AXE
@@ -19,11 +18,7 @@ import net.minecraft.data.DataGenerator
 import net.minecraft.data.recipes.RecipeCategory
 import net.minecraft.data.recipes.RecipeOutput
 import net.minecraft.data.recipes.ShapedRecipeBuilder
-import net.minecraft.data.recipes.ShapelessRecipeBuilder
-import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items.STICK
-import net.minecraft.world.item.crafting.Ingredient
-import net.minecraft.world.item.enchantment.EnchantmentHelper.has
 import java.util.concurrent.CompletableFuture
 
 class NormalCraftingTableRecipeProvider(

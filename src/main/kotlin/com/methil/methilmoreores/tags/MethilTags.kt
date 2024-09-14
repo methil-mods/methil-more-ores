@@ -10,7 +10,7 @@ import net.minecraft.tags.TagKey
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
 
-object TagsInit {
+object MethilTags {
     fun createOreLocation(name: String): ResourceLocation {
         return ResourceLocation.fromNamespaceAndPath(MODID, "ores/$name")
     }

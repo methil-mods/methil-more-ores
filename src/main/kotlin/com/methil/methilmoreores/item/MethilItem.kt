@@ -40,6 +40,7 @@ object MethilItem {
                 -2.1f
             )
         )) } )
+
     val METHIL_PICKAXE = ITEMS.register("methil_pickaxe", Supplier { PickaxeItem(METHIL_TIER, Item.Properties()
         .rarity(Rarity.EPIC).attributes(PickaxeItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
 
@@ -54,7 +55,6 @@ object MethilItem {
 
     val METHIL_SHOVEL = ITEMS.register("methil_shovel", Supplier { ShovelItem(METHIL_TIER, Item.Properties()
         .rarity(Rarity.EPIC).attributes(ShovelItem.createAttributes(METHIL_TIER, 1.3f, -2.8f))) } )
-
 
     val METHIL_HELMET: Supplier<ArmorItem> = ITEMS.register("methil_helmet", Supplier {
         MethilArmorItem(

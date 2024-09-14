@@ -2,7 +2,6 @@ package com.methil.methilmoreores.data.recipes.provider
 
 
 import com.methil.methilmoreores.block.MethilBlock
-import com.methil.methilmoreores.data.init.TagsInit
 import com.methil.methilmoreores.data.recipes.MethilRecipeProvider
 import com.methil.methilmoreores.item.MethilItem
 import net.minecraft.core.HolderLookup
