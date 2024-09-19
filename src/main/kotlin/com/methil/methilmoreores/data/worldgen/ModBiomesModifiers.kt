@@ -26,7 +26,7 @@ object ModBiomesModifiers {
             AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_METHIL_ORE)),
-                GenerationStep.Decoration.RAW_GENERATION)
+                GenerationStep.Decoration.UNDERGROUND_ORES)
         )
 
         context.register(
@@ -38,11 +38,27 @@ object ModBiomesModifiers {
         )
 
         context.register(
+            createKey("methil_add_deepslate_ore_underground_deco"),
+            AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEEPSLATE_METHIL_ORE)),
+                GenerationStep.Decoration.UNDERGROUND_DECORATION)
+        )
+
+        context.register(
             createKey("methil_add_ore_underground_ores"),
             AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.METHIL_ORE)),
                 GenerationStep.Decoration.UNDERGROUND_ORES)
+        )
+
+        context.register(
+            createKey("methil_add_ore_underground_deco"),
+            AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.METHIL_ORE)),
+                GenerationStep.Decoration.UNDERGROUND_DECORATION)
         )
 
     }

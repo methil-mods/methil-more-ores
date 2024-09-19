@@ -27,6 +27,7 @@ object ModPlacedFeatures {
         val holderNetherMethilOre: Holder<ConfiguredFeature<*, *>> =
             configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_METHIL_ORE)
 
+
         register(context, METHIL_ORE, holderOverworldMethilOre,
             ModOrePlacement.frequentOrePlacements(
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))

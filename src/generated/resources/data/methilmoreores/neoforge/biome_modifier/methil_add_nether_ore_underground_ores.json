@@ -2,5 +2,5 @@
   "type": "neoforge:add_features",
   "biomes": "#minecraft:is_nether",
   "features": "methilmoreores:nether_methil_ore",
-  "step": "raw_generation"
+  "step": "underground_ores"
 }
