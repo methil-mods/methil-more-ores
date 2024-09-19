@@ -1,6 +1,8 @@
 {
   "item.methilmoreores.creative_tab": "Methil",
   "block.methilmoreores.methil_ore": "Methil Ore",
+  "block.methilmoreores.deepslate_methil_ore": "Deepslate Methil Ore",
+  "block.methilmoreores.nether_methil_ore": "Nether Methil Ore",
   "item.methilmoreores.methil": "Methil",
   "item.methilmoreores.methil_pickaxe": "Methil Pickaxe",
   "item.methilmoreores.methil_double_pickaxe": "Methil Double Pickaxe",

@@ -17,6 +17,8 @@ class ModBlockLootTables(p_344943_: HolderLookup.Provider) : BlockLootSubProvide
     override fun generate() {
         LOGGER.info("Generate MODBLOCKLOOTTABLES")
         add(MethilBlock.METHIL_ORE_BLOCK.get(), createOreDrop(MethilBlock.METHIL_ORE_BLOCK.get(), MethilItem.METHIL_ITEM.get()))
+        add(MethilBlock.NETHER_METHIL_ORE_BLOCK.get(), createOreDrop(MethilBlock.NETHER_METHIL_ORE_BLOCK.get(), MethilItem.METHIL_ITEM.get()))
+        add(MethilBlock.DEEPSLATE_METHIL_ORE_BLOCK.get(), createOreDrop(MethilBlock.DEEPSLATE_METHIL_ORE_BLOCK.get(), MethilItem.METHIL_ITEM.get()))
     }
 
     override fun getKnownBlocks(): Iterable<Block> {

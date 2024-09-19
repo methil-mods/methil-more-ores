@@ -29,6 +29,28 @@ object MethilBlock {
                 .strength(3.0f, 10.0f)
             )
         } )
+    val DEEPSLATE_METHIL_ORE_BLOCK: DeferredBlock<Block> =
+        registerBlock("deepslate_methil_ore", {
+            DropExperienceBlock(UniformInt.of(5,10), BlockBehaviour.Properties.of()
+                .destroyTime(5.0f)
+                .explosionResistance(10.0F)
+                .sound(SoundType.METAL)
+                .lightLevel { 5 }
+                .requiresCorrectToolForDrops()
+                .strength(5.0f, 10.0f)
+            )
+        } )
+    val NETHER_METHIL_ORE_BLOCK: DeferredBlock<Block> =
+        registerBlock("nether_methil_ore", {
+            DropExperienceBlock(UniformInt.of(8,14), BlockBehaviour.Properties.of()
+                .destroyTime(3.0f)
+                .explosionResistance(10.0F)
+                .sound(SoundType.METAL)
+                .lightLevel { 5 }
+                .requiresCorrectToolForDrops()
+                .strength(3.0f, 10.0f)
+            )
+        } )
 
 
     fun register(modEventBus: IEventBus){

@@ -22,35 +22,27 @@ object ModBiomesModifiers {
         val biomes = context.lookup(Registries.BIOME)
 
         context.register(
+            createKey("methil_add_nether_ore_underground_ores"),
+            AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_METHIL_ORE)),
+                GenerationStep.Decoration.RAW_GENERATION)
+        )
+
+        context.register(
+            createKey("methil_add_deepslate_ore_underground_ores"),
+            AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEEPSLATE_METHIL_ORE)),
+                GenerationStep.Decoration.UNDERGROUND_ORES)
+        )
+
+        context.register(
             createKey("methil_add_ore_underground_ores"),
             AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.METHIL_ORE)),
                 GenerationStep.Decoration.UNDERGROUND_ORES)
-        )
-
-        context.register(
-            createKey("methil_add_ore_lake"),
-            AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.METHIL_ORE)),
-                GenerationStep.Decoration.LAKES)
-        )
-
-        context.register(
-            createKey("methil_add_ore_stronghold"),
-            AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.METHIL_ORE)),
-                GenerationStep.Decoration.STRONGHOLDS)
-        )
-
-        context.register(
-            createKey("methil_add_ore_underground_struct"),
-            AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.METHIL_ORE)),
-                GenerationStep.Decoration.UNDERGROUND_STRUCTURES)
         )
 
     }

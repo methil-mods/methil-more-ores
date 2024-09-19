@@ -17,7 +17,7 @@ object ModOrePlacement {
 
     fun frequentOrePlacements(placementModifier: PlacementModifier): List<PlacementModifier> {
         // Instead of using CountPlacement.of(count), use RarityFilter.onAverageOnceEvery(1) to force constant placement
-        return orePlacements(RarityFilter.onAverageOnceEvery(1), placementModifier)
+        return orePlacements(RarityFilter.onAverageOnceEvery(5), placementModifier)
     }
 
 }
