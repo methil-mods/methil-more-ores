@@ -11,7 +11,53 @@
 
 ## Features
 
-- **Methil Ore:** A new, rare purple ore found in the deepest parts of the world, just after diamonds.
+### Methil Ores
+| Item / Block                                        | Name                                                                      |
+|-----------------------------------------------------|---------------------------------------------------------------------------|
+| ![Methil](/readme/item_upscale/methil.png)          | **The Methil**<br>Methil is the item we get when we destroy a Methil Ore. |
+| ![Methil Ore](/readme/block_upscale/methil_ore.png) | **The Methil Ore**<br>Methil Ore is a precious and rare resource, known for its distinctive luster and valuable properties. It can be mined to obtain Methil. |
+| ![Deepslate Methil Ore](/readme/block_upscale/deepslate_methil_ore.png) | **The Deepslate Methil Ore**<br>A harder version of Methil Ore, found deep underground. |
+| ![Nether Methil Ore](/readme/block_upscale/nether_methil_ore.png) | **The Nether Methil Ore**<br>A rare Methil Ore variant found in the Nether dimension. |
+
+### Methil Armors
+
+> Once fully equipped with Methil, you can gain some small bonuses...
+
+| Item                                              | Name                                        |
+|--------------------------------------------------------|---------------------------------------------|
+| ![Methil Helmet](/readme/item_upscale/methil_helmet.png) | **The Methil Helmet**<br>A well-crafted and sturdy helmet made from Methil. Known for providing excellent protection in battle while being lightweight. |
+| ![Methil Chestplate](/readme/item_upscale/methil_chestplate.png) | **The Methil Chestplate**<br>This chestplate offers superior defense with enhanced durability, crafted using Methil for the toughest adventurers. |
+| ![Methil Leggings](/readme/item_upscale/methil_leggings.png) | **The Methil Leggings**<br>These durable leggings offer great mobility and protection, perfect for those needing to balance defense with agility. |
+| ![Methil Boots](/readme/item_upscale/methil_boots.png) | **The Methil Boots**<br>Lightweight but tough, these boots provide excellent protection while allowing swift movement through rough terrain. |
+
+### Methil Tools
+| Item                                                                  | Name                                        |
+|-----------------------------------------------------------------------|---------------------------------------------|
+| ![Methil Pickaxe](/readme/item_upscale/methil_pickaxe.png) | **The Methil Pickaxe**<br>A powerful tool designed for mining, crafted from Methil. It efficiently breaks blocks and has increased durability. |
+| ![Methil Axe](/readme/item_upscale/methil_axe.png)         | **The Methil Axe**<br>This sturdy axe excels at cutting wood and breaking logs, making it essential for any lumberjack. |
+| ![Methil Shovel](/readme/item_upscale/methil_shovel.png)   | **The Methil Shovel**<br>A reliable shovel made from Methil, perfect for digging through dirt, sand, and gravel with ease. |
+| ![Methil Hoe](/readme/item_upscale/methil_hoe.png)         | **The Methil Hoe**<br>An essential farming tool that allows for efficient tilling of soil and planting crops. |
+| ![Methil Double Pickaxe](/readme/item_upscale/methil_double_pickaxe.png) | **The Methil Double Pickaxe**<br>A unique tool that allows for quicker mining by utilizing two pickaxes in one, ideal for resource gathering. |
+| ![Methil Long Stick Sword](/readme/item_upscale/methil_long_stick_sword.png) | **The Methil Long Stick Sword**<br>A versatile weapon that combines reach and power, perfect for combat in close quarters and against distant foes. |
+
+### Emerald Armor
+
+| Item                                                                  | Name                                        |
+|-----------------------------------------------------------------------|---------------------------------------------|
+| ![Emerald Helmet](/readme/item_upscale/emerald_helmet.png) | **The Emerald Helmet**<br>A shimmering helmet made from emeralds, offering exceptional protection while enhancing the wearer's agility. |
+| ![Emerald Chestplate](/readme/item_upscale/emerald_chestplate.png) | **The Emerald Chestplate**<br>This chestplate provides robust defense and is crafted from the finest emeralds for durability and style. |
+| ![Emerald Leggings](/readme/item_upscale/emerald_leggings.png) | **The Emerald Leggings**<br>These elegant leggings offer excellent protection and comfort, perfect for adventurers on the go. |
+| ![Emerald Boots](/readme/item_upscale/emerald_boots.png) | **The Emerald Boots**<br>Lightweight yet strong, these boots provide swift movement and protection against the elements. |
+
+### Emerald Tools
+
+| Item                                                                  | Name                                        |
+|-----------------------------------------------------------------------|---------------------------------------------|
+| ![Emerald Pickaxe](/readme/item_upscale/emerald_pickaxe.png) | **The Emerald Pickaxe**<br>A durable and efficient tool for mining, crafted from emeralds to withstand the toughest blocks. |
+| ![Emerald Axe](/readme/item_upscale/emerald_axe.png)         | **The Emerald Axe**<br>This sharp axe is perfect for cutting wood quickly and efficiently, making it a must-have for any builder. |
+| ![Emerald Shovel](/readme/item_upscale/emerald_shovel.png)   | **The Emerald Shovel**<br>A strong shovel that makes digging through dirt and gravel a breeze, thanks to its emerald construction. |
+| ![Emerald Hoe](/readme/item_upscale/emerald_hoe.png)         | **The Emerald Hoe**<br>An essential tool for farmers, this hoe efficiently tills soil and prepares it for planting crops. |
+| ![Emerald Sword](/readme/item_upscale/emerald_sword.png)     | **The Emerald Sword**<br>A finely crafted sword that delivers powerful strikes, perfect for defending against foes. |
 
 ## Installation
 
