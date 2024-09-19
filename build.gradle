@@ -50,6 +50,21 @@ neoForge {
         client {
             client()
 
+            // In that way, we ensure that we will use X-Ray mod for testing the ore mod 
+            def modTestDir = file('mods_test')
+            def modsDir = file('run/mods')
+
+            // Create the runs/mods directory if it doesn't exist
+            if (!modsDir.exists()) {
+                modsDir.mkdirs()
+            }
+
+            // Copy all files from mod_test to runs/mods
+            copy {
+                from modTestDir
+                into modsDir
+            }
+
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
