@@ -1,6 +1,7 @@
 package com.methil.methilmoreores.data.recipes.provider
 
 
+import com.methil.methilmoreores.block.MethilBlock.METHIL_BLOCK
 import com.methil.methilmoreores.data.recipes.MethilRecipeProvider
 import com.methil.methilmoreores.item.methil.MethilItem
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_AXE
@@ -9,6 +10,7 @@ import com.methil.methilmoreores.item.methil.MethilItem.METHIL_CHESTPLATE
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_DOUBLE_PICKAXE
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_HELMET
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_HOE
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_ITEM
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_LEGGINGS
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_PICKAXE
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_SHOVEL
@@ -18,7 +20,9 @@ import net.minecraft.data.DataGenerator
 import net.minecraft.data.recipes.RecipeCategory
 import net.minecraft.data.recipes.RecipeOutput
 import net.minecraft.data.recipes.ShapedRecipeBuilder
+import net.minecraft.data.recipes.ShapelessRecipeBuilder
 import net.minecraft.world.item.Items.STICK
+import net.minecraft.world.item.crafting.ShapelessRecipe
 import java.util.concurrent.CompletableFuture
 
 class MethilNormalCraftingTableRecipeProvider(
@@ -27,6 +31,20 @@ class MethilNormalCraftingTableRecipeProvider(
     private val recipeOutput: RecipeOutput
 ) : MethilRecipeProvider(generator, pRegistries) {
     fun build() {
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, METHIL_ITEM.get(), 9)
+            .requires(METHIL_BLOCK.get())
+            .unlockedBy("has_item", has(MethilItem.METHIL_ITEM))
+            .save(this.recipeOutput, getModId("methil_item_recipe"))
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, METHIL_BLOCK.get(), 1)
+            .pattern("###")
+            .pattern("###")
+            .pattern("###")
+            .define('#', MethilItem.METHIL_ITEM)
+            .unlockedBy("has_item", has(MethilItem.METHIL_ITEM))
+            .save(this.recipeOutput, getModId("methil_block_recipe"))
+
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, METHIL_SHOVEL.get(), 1)
             .pattern(" # ")
             .pattern(" S ")

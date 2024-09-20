@@ -1,5 +1,7 @@
 {
   "values": [
-    "methilmoreores:methil_ore"
+    "methilmoreores:methil_ore",
+    "methilmoreores:nether_methil_ore",
+    "methilmoreores:deepslate_methil_ore"
   ]
 }

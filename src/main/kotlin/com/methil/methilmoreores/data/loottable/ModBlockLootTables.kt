@@ -3,6 +3,7 @@ package com.methil.methilmoreores.data.loottable
 import com.methil.methilmoreores.MethilMoreOres.Companion.LOGGER
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.block.MethilBlock
+import com.methil.methilmoreores.block.MethilBlock.METHIL_BLOCK
 import com.methil.methilmoreores.item.methil.MethilItem
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.registries.BuiltInRegistries
@@ -16,6 +17,7 @@ import java.util.stream.Collectors
 class ModBlockLootTables(p_344943_: HolderLookup.Provider) : BlockLootSubProvider(setOf(), FeatureFlags.REGISTRY.allFlags(), p_344943_) {
     override fun generate() {
         LOGGER.info("Generate MODBLOCKLOOTTABLES")
+        dropSelf(METHIL_BLOCK.get())
         add(MethilBlock.METHIL_ORE_BLOCK.get(), createOreDrop(MethilBlock.METHIL_ORE_BLOCK.get(), MethilItem.METHIL_ITEM.get()))
         add(MethilBlock.NETHER_METHIL_ORE_BLOCK.get(), createOreDrop(MethilBlock.NETHER_METHIL_ORE_BLOCK.get(), MethilItem.METHIL_ITEM.get()))
         add(MethilBlock.DEEPSLATE_METHIL_ORE_BLOCK.get(), createOreDrop(MethilBlock.DEEPSLATE_METHIL_ORE_BLOCK.get(), MethilItem.METHIL_ITEM.get()))

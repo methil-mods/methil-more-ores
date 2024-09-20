@@ -36,5 +36,6 @@ object MethilTags {
 
     object BlockTagsInit {
         val METHIL_ORE_TAG: TagKey<Block> = BlockTags.create(createOreLocation("methil_ore"))
+        val METHIL_BLOCK_TAG: TagKey<Block> = BlockTags.create(createBlockLocation("methil_block"))
     }
 }
