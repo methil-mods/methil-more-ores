@@ -49,22 +49,6 @@ neoForge {
     runs {
         client {
             client()
-
-            // In that way, we ensure that we will use X-Ray mod for testing the ore mod 
-            def modTestDir = file('mods_test')
-            def modsDir = file('run/mods')
-
-            // Create the runs/mods directory if it doesn't exist
-            if (!modsDir.exists()) {
-                modsDir.mkdirs()
-            }
-
-            // Copy all files from mod_test to runs/mods
-            copy {
-                from modTestDir
-                into modsDir
-            }
-
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
@@ -84,11 +68,7 @@ neoForge {
         }
 
         data {
-            delete fileTree(dir: 'run/mods', include: '**/*')
             data()
-            // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
-            // gameDirectory = project.file('run-data')
-
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
