@@ -33,12 +33,13 @@
 ### Methil Tools
 | Item                                                                  | Name                                        |
 |-----------------------------------------------------------------------|---------------------------------------------|
-| ![Methil Pickaxe](/readme/item_upscale/methil_pickaxe.png) | **The Methil Pickaxe**<br>A powerful tool designed for mining, crafted from Methil. It efficiently breaks blocks and has increased durability. |
-| ![Methil Axe](/readme/item_upscale/methil_axe.png)         | **The Methil Axe**<br>This sturdy axe excels at cutting wood and breaking logs, making it essential for any lumberjack. |
-| ![Methil Shovel](/readme/item_upscale/methil_shovel.png)   | **The Methil Shovel**<br>A reliable shovel made from Methil, perfect for digging through dirt, sand, and gravel with ease. |
-| ![Methil Hoe](/readme/item_upscale/methil_hoe.png)         | **The Methil Hoe**<br>An essential farming tool that allows for efficient tilling of soil and planting crops. |
-| ![Methil Double Pickaxe](/readme/item_upscale/methil_double_pickaxe.png) | **The Methil Double Pickaxe**<br>A unique tool that allows for quicker mining by utilizing two pickaxes in one, ideal for resource gathering. |
-| ![Methil Long Stick Sword](/readme/item_upscale/methil_long_stick_sword.png) | **The Methil Long Stick Sword**<br>A versatile weapon that combines reach and power, perfect for combat in close quarters and against distant foes. |
+| ![Methil Pickaxe](/readme/item_upscale/methil_pickaxe.png) | **The Methil Pickaxe**<br>A powerful tool designed for mining, crafted from Methil. It efficiently breaks blocks and has increased durability.<br><br>*"If rocks could scream, they'd run away."* |
+| ![Methil Axe](/readme/item_upscale/methil_axe.png)         | **The Methil Axe**<br>This sturdy axe excels at cutting wood and breaking logs, making it essential for any lumberjack.<br><br>*"Timber! But make it stylish."* |
+| ![Methil Shovel](/readme/item_upscale/methil_shovel.png)   | **The Methil Shovel**<br>A reliable shovel made from Methil, perfect for digging through dirt, sand, and gravel with ease.<br><br>*"Because digging with your hands is so yesterday."* |
+| ![Methil Hoe](/readme/item_upscale/methil_hoe.png)         | **The Methil Hoe**<br>An essential farming tool that allows for efficient tilling of soil and planting crops.<br><br>*"Turning dirt into dinner, one block at a time."* |
+| ![Methil Sword](/readme/item_upscale/methil_sword.png)     | **The Methil Sword**<br>A sharp and deadly weapon forged from Methil, designed to deal damage with precision and power.<br><br>*"Sharp enough to cut through boredom... and enemies."* |
+| ![Methil Double Pickaxe](/readme/item_upscale/methil_double_pickaxe.png) | **The Methil Double Pickaxe**<br>A unique tool that allows for quicker mining by utilizing two pickaxes in one, ideal for resource gathering.<br><br>*"Twice the pickaxe, twice the fun!"* |
+| ![Methil Long Stick Sword](/readme/item_upscale/methil_long_stick_sword.png) | **The Methil Long Stick Sword**<br>A versatile weapon that combines reach and power, perfect for combat in close quarters and against distant foes.<br><br>*"Why settle for short swords when you can reach for greatness?"* |
 
 ### Emerald Armor
 
