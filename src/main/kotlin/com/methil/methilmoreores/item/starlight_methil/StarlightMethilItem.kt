@@ -26,8 +26,8 @@ object StarlightMethilItem {
     val STARLIGHT_METHIL_TIER = SimpleTier(
         Tags.Blocks.ORES,
         1900,
-        9f,
-        5.5f,
+        11f,
+        8.5f,
         26,
         Supplier { Ingredient.of(STARLIGHT_METHIL_ITEM) }
     )
