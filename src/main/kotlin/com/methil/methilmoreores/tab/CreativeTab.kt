@@ -5,6 +5,7 @@ import com.methil.methilmoreores.block.MethilBlock
 import com.methil.methilmoreores.item.emerald.EmeraldItem
 import com.methil.methilmoreores.item.methil.MethilItem
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_ITEM
+import com.methil.methilmoreores.item.starlight_methil.StarlightMethilItem
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
@@ -37,6 +38,11 @@ object CreativeTab {
                         .filter(addedItems::add)
                         .forEach(output::accept)
                     MethilItem.ITEMS.getEntries()
+                        .stream()
+                        .map { item -> item.get().asItem() }
+                        .filter(addedItems::add)
+                        .forEach(output::accept)
+                    StarlightMethilItem.ITEMS.getEntries()
                         .stream()
                         .map { item -> item.get().asItem() }
                         .filter(addedItems::add)

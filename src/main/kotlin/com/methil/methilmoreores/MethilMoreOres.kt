@@ -9,6 +9,8 @@ import com.methil.methilmoreores.item.emerald.EmeraldItem
 import com.methil.methilmoreores.item.methil.MethilArmor
 import com.methil.methilmoreores.item.methil.MethilItem
 import com.methil.methilmoreores.item.methil.custom.MethilLongStickSword
+import com.methil.methilmoreores.item.starlight_methil.StarlightMethilArmor
+import com.methil.methilmoreores.item.starlight_methil.StarlightMethilItem
 import com.methil.methilmoreores.tab.CreativeTab
 import com.methil.methilmoreores.tab.CreativeTab.addCreative
 import com.mojang.logging.LogUtils
@@ -43,6 +45,10 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
         MethilBlock.register(modEventBus)
         MethilItem.register(modEventBus)
         MethilArmor.register(modEventBus)
+
+        // Starlight Methil register
+        StarlightMethilItem.register(modEventBus)
+        StarlightMethilArmor.register(modEventBus)
 
         // Emerald register
         EmeraldItem.register(modEventBus)
