@@ -27,5 +27,15 @@
   "item.methilmoreores.emerald_leggings": "Emerald Leggings",
   "item.methilmoreores.emerald_boots": "Emerald Boots",
 
+  "item.methilmoreores.starlight_methil_helmet": "Starlight Methil Helmet",
+  "item.methilmoreores.starlight_methil_chestplate": "Starlight Methil Chestplate",
+  "item.methilmoreores.starlight_methil_leggings": "Starlight Methil Leggings",
+  "item.methilmoreores.starlight_methil_boots": "Starlight Methil Boots",
+  "item.methilmoreores.starlight_methil_sword": "Starlight Methil Sword",
+  "item.methilmoreores.starlight_methil_pickaxe": "Starlight Methil Pickaxe",
+  "item.methilmoreores.starlight_methil_axe": "Starlight Methil Axe",
+  "item.methilmoreores.starlight_methil_shovel": "Starlight Methil Shovel",
+  "item.methilmoreores.starlight_methil_hoe": "Starlight Methil Hoe",
+
   "itemGroup.methil.methilmoreores": "Methil More Ores"
 }
