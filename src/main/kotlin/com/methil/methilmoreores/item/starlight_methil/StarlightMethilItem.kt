@@ -59,28 +59,28 @@ object StarlightMethilItem {
             .rarity(Rarity.EPIC).attributes(ShovelItem.createAttributes(STARLIGHT_METHIL_TIER, 1.3f, -2.8f))) } )
 
     val STARLIGHT_METHIL_HELMET: Supplier<ArmorItem> = ITEMS.register("starlight_methil_helmet", Supplier {
-        MethilArmorItem(
+        StarlightMethilArmorItem(
             STARLIGHT_METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.HELMET,
             Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15)).rarity(Rarity.EPIC)
         )
     })
     val STARLIGHT_METHIL_CHESTPLATE: Supplier<ArmorItem> = ITEMS.register("starlight_methil_chestplate", Supplier {
-        MethilArmorItem(
+        StarlightMethilArmorItem(
             STARLIGHT_METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.CHESTPLATE,
             Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(15)).rarity(Rarity.EPIC)
         )
     })
     val STARLIGHT_METHIL_LEGGINGS: Supplier<ArmorItem> = ITEMS.register("starlight_methil_leggings", Supplier {
-        MethilArmorItem(
+        StarlightMethilArmorItem(
             STARLIGHT_METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.LEGGINGS,
             Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15)).rarity(Rarity.EPIC)
         )
     })
     val STARLIGHT_METHIL_BOOTS: Supplier<ArmorItem> = ITEMS.register("starlight_methil_boots", Supplier {
-        MethilArmorItem(
+        StarlightMethilArmorItem(
             STARLIGHT_METHIL_ARMOR_MATERIAL,
             ArmorItem.Type.BOOTS,
             Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15)).rarity(Rarity.EPIC)

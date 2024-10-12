@@ -1,6 +1,8 @@
 package com.methil.methilmoreores.effect
 
 import com.methil.methilmoreores.item.methil.MethilArmorItem
+import com.methil.methilmoreores.item.starlight_methil.StarlightMethilArmor
+import com.methil.methilmoreores.item.starlight_methil.StarlightMethilArmorItem
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.entity.EquipmentSlot
@@ -25,6 +27,18 @@ object MethilArmorEffect {
                 boots is MethilArmorItem
     }
 
+    private fun isWearingFullStarlightMethilArmor(player: Player): Boolean {
+        val helmet = player.getItemBySlot(EquipmentSlot.HEAD).item
+        val chestplate = player.getItemBySlot(EquipmentSlot.CHEST).item
+        val leggings = player.getItemBySlot(EquipmentSlot.LEGS).item
+        val boots = player.getItemBySlot(EquipmentSlot.FEET).item
+
+        return helmet is StarlightMethilArmorItem &&
+                chestplate is StarlightMethilArmorItem &&
+                leggings is StarlightMethilArmorItem &&
+                boots is StarlightMethilArmorItem
+    }
+
     @SubscribeEvent
     public fun onPlayerTick(event: PlayerTickEvent.Post) {
         val player = event.entity ?: return
@@ -33,6 +47,14 @@ object MethilArmorEffect {
             if (!player.hasEffect(MobEffects.ABSORPTION)) {
                 player.addEffect(
                     MobEffectInstance(MobEffects.ABSORPTION, 300, 1, false, false, true)
+                )
+            }
+        }
+
+        if (isWearingFullStarlightMethilArmor(player)) {
+            if (!player.hasEffect(MobEffects.ABSORPTION)) {
+                player.addEffect(
+                    MobEffectInstance(MobEffects.ABSORPTION, 300, 3, false, false, true)
                 )
             }
         }
