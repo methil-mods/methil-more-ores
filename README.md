@@ -41,6 +41,25 @@
 | ![Methil Double Pickaxe](/readme/item_upscale/methil_double_pickaxe.png) | **The Methil Double Pickaxe**<br>A unique tool that allows for quicker mining by utilizing two pickaxes in one, ideal for resource gathering.<br><br>*"Twice the pickaxe, twice the fun!"* |
 | ![Methil Long Stick Sword](/readme/item_upscale/methil_long_stick_sword.png) | **The Methil Long Stick Sword**<br>A versatile weapon that combines reach and power, perfect for combat in close quarters and against distant foes.<br><br>*"Why settle for short swords when you can reach for greatness?"* |
 
+### Starlight Methil Armor
+
+| Item                                                                  | Name                                        |
+|-----------------------------------------------------------------------|---------------------------------------------|
+| ![Starlight Methil Helmet](/readme/item_upscale/starlight_methil_helmet.png) | **The Starlight Methil Helmet**<br>A helmet forged from the mystical Starlight Methil, offering superior protection and heightened perception in low light. |
+| ![Starlight Methil Chestplate](/readme/item_upscale/starlight_methil_chestplate.png) | **The Starlight Methil Chestplate**<br>This chestplate offers unparalleled defense, glowing faintly with the power of starlight, providing both strength and elegance. |
+| ![Starlight Methil Leggings](/readme/item_upscale/starlight_methil_leggings.png) | **The Starlight Methil Leggings**<br>Crafted for both protection and mobility, these leggings are infused with starlight to enhance the wearer’s agility and speed. |
+| ![Starlight Methil Boots](/readme/item_upscale/starlight_methil_boots.png) | **The Starlight Methil Boots**<br>These boots allow for swift, silent movement, while the glow of Starlight Methil protects against the harshest environments. |
+
+### Starlight Methil Tools
+
+| Item                                                                  | Name                                        |
+|-----------------------------------------------------------------------|---------------------------------------------|
+| ![Starlight Methil Pickaxe](/readme/item_upscale/starlight_methil_pickaxe.png) | **The Starlight Methil Pickaxe**<br>A powerful mining tool forged from Starlight Methil, capable of breaking through the toughest materials with ease. |
+| ![Starlight Methil Axe](/readme/item_upscale/starlight_methil_axe.png)         | **The Starlight Methil Axe**<br>This axe slices through wood effortlessly, empowered by the cosmic energy of Starlight Methil. |
+| ![Starlight Methil Shovel](/readme/item_upscale/starlight_methil_shovel.png)   | **The Starlight Methil Shovel**<br>A lightweight yet strong shovel, perfect for digging swiftly through any terrain, thanks to the celestial properties of Starlight Methil. |
+| ![Starlight Methil Hoe](/readme/item_upscale/starlight_methil_hoe.png)         | **The Starlight Methil Hoe**<br>A farmer’s ideal tool, enhanced with the power of starlight, making tilling and preparing land more efficient than ever. |
+| ![Starlight Methil Sword](/readme/item_upscale/starlight_methil_sword.png)     | **The Starlight Methil Sword**<br>A beautifully crafted sword that strikes with the force of a falling star, cutting through enemies with ease. |
+
 ### Emerald Armor
 
 | Item                                                                  | Name                                        |
