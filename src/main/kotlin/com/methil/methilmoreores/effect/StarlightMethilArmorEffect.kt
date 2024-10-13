@@ -27,11 +27,16 @@ object StarlightMethilArmorEffect {
         val player = event.entity ?: return
 
         if (isWearingFullStarlightMethilArmor(player)) {
-            if (!player.hasEffect(MobEffects.ABSORPTION)) {
+            if (!player.hasEffect(MethilEffect.STARLIGHT_METHILFY)) {
                 player.addEffect(
-                    MobEffectInstance(MobEffects.ABSORPTION, 300, 3, false, false, true)
+                    MobEffectInstance(MethilEffect.STARLIGHT_METHILFY, -1, 1, false, false, false)
                 )
             }
+        } else {
+            if (player.hasEffect(MethilEffect.STARLIGHT_METHILFY)) {
+                player.removeEffect(MethilEffect.STARLIGHT_METHILFY)
+            }
+
         }
     }
 }

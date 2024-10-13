@@ -3,6 +3,7 @@ package com.methil.methilmoreores
 import com.methil.methilmoreores.block.MethilBlock
 import com.methil.methilmoreores.data.DataGenerators
 import com.methil.methilmoreores.effect.MethilArmorEffect
+import com.methil.methilmoreores.effect.MethilEffect
 import com.methil.methilmoreores.effect.StarlightMethilArmorEffect
 import com.methil.methilmoreores.event.MethilEvents
 import com.methil.methilmoreores.item.emerald.EmeraldArmor
@@ -46,6 +47,7 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
         MethilBlock.register(modEventBus)
         MethilItem.register(modEventBus)
         MethilArmor.register(modEventBus)
+        MethilEffect.register(modEventBus)
 
         // Starlight Methil register
         StarlightMethilItem.register(modEventBus)
