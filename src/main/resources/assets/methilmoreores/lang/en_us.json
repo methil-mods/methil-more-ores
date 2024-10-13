@@ -37,5 +37,8 @@
   "item.methilmoreores.starlight_methil_shovel": "Starlight Methil Shovel",
   "item.methilmoreores.starlight_methil_hoe": "Starlight Methil Hoe",
 
+  "effect.methilmoreores.methilfy": "Methilfy",
+  "effect.methilmoreores.starlight_methilfy": "Starlight Methilfy",
+
   "itemGroup.methil.methilmoreores": "Methil More Ores"
 }
