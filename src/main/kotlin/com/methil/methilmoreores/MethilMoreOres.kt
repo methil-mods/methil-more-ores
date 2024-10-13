@@ -2,9 +2,9 @@ package com.methil.methilmoreores
 
 import com.methil.methilmoreores.block.MethilBlock
 import com.methil.methilmoreores.data.DataGenerators
-import com.methil.methilmoreores.effect.MethilArmorEffect
 import com.methil.methilmoreores.effect.MethilEffect
-import com.methil.methilmoreores.effect.StarlightMethilArmorEffect
+import com.methil.methilmoreores.effect.MethilfyEffect
+import com.methil.methilmoreores.effect.StarlightMethilfyEffect
 import com.methil.methilmoreores.event.MethilEvents
 import com.methil.methilmoreores.item.emerald.EmeraldArmor
 import com.methil.methilmoreores.item.emerald.EmeraldItem
@@ -62,8 +62,8 @@ class MethilMoreOres (modEventBus: IEventBus, modContainer: ModContainer) {
         modEventBus.addListener(DataGenerators::gatherData)
         EVENT_BUS.addListener(MethilEvents::addCustomTrades)
         EVENT_BUS.addListener(MethilLongStickSword::onPlayerTick)
-        EVENT_BUS.addListener(MethilArmorEffect::onPlayerTick)
-        EVENT_BUS.addListener(StarlightMethilArmorEffect::onPlayerTick)
+        EVENT_BUS.addListener(MethilfyEffect::onPlayerTick)
+        EVENT_BUS.addListener(StarlightMethilfyEffect::onPlayerTick)
 
 
 
