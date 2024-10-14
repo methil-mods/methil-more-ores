@@ -26,6 +26,19 @@
     "item.methilmoreores.emerald_chestplate": "Plastron en Émeraude",
     "item.methilmoreores.emerald_leggings": "Jambières en Émeraude",
     "item.methilmoreores.emerald_boots": "Bottes en Émeraude",
+
+    "item.methilmoreores.starlight_methil_helmet": "Casque de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_chestplate": "Plastron de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_leggings": "Jambières de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_boots": "Bottes de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_sword": "Épée de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_pickaxe": "Pioche de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_axe": "Hache de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_shovel": "Pelle de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_hoe": "Houe de Méthil Étoilé",
+
+    "item.methilmoreores.methil_apple": "Pomme de Méthil",
+    "item.methilmoreores.starlight_methil_apple": "Pomme de Méthil Étoilé",
   
     "itemGroup.methil.methilmoreores": "Methil More Ores"
 }
