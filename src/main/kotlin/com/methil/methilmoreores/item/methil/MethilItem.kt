@@ -1,9 +1,13 @@
 package com.methil.methilmoreores.item.methil
 
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
+import com.methil.methilmoreores.effect.MethilEffect
 import com.methil.methilmoreores.item.methil.MethilArmor.METHIL_ARMOR_MATERIAL
 import com.methil.methilmoreores.item.methil.custom.MethilDoublePickaxe
 import com.methil.methilmoreores.item.methil.custom.MethilLongStickSword
+import net.minecraft.world.effect.MobEffectInstance
+import net.minecraft.world.effect.MobEffects
+import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.*
 import net.minecraft.world.item.crafting.Ingredient
 import net.neoforged.bus.api.IEventBus
@@ -20,6 +24,32 @@ object MethilItem {
 
     val METHIL_ITEM: DeferredItem<Item> = ITEMS.registerSimpleItem(
         "methil", Item.Properties().rarity(Rarity.EPIC)
+    )
+
+    val METHIL_APPLE: DeferredItem<Item> = ITEMS.registerSimpleItem("methil_apple",
+        Item.Properties().rarity(Rarity.EPIC).food(FoodProperties.Builder()
+            .alwaysEdible().nutrition(8).effect(
+                 Supplier { MobEffectInstance(MethilEffect.METHILFY, 600, 1) },
+                1.0f
+            ).effect(
+                Supplier { MobEffectInstance(MobEffects.REGENERATION, 600, 1) },
+                1.0f
+            )
+            .build()
+        )
+    )
+
+    val STARLIGHT_METHIL_APPLE: DeferredItem<Item> = ITEMS.registerSimpleItem("starlight_methil_apple",
+        Item.Properties().rarity(Rarity.EPIC).food(FoodProperties.Builder()
+            .alwaysEdible().nutrition(8).effect(
+                Supplier { MobEffectInstance(MethilEffect.STARLIGHT_METHILFY, 600, 1) },
+                1.0f
+            ).effect(
+                Supplier { MobEffectInstance(MobEffects.REGENERATION, 600, 1) },
+                1.0f
+            )
+            .build()
+        )
     )
 
     val METHIL_TIER = SimpleTier(

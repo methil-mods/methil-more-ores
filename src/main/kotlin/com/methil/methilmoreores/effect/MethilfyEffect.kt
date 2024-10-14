@@ -2,7 +2,6 @@ package com.methil.methilmoreores.effect
 
 import com.methil.methilmoreores.MethilMoreOres.Companion.MODID
 import com.methil.methilmoreores.item.methil.MethilArmorItem
-import com.methil.methilmoreores.item.starlight_methil.StarlightMethilArmorItem
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectCategory
@@ -34,16 +33,23 @@ class MethilfyEffect : MobEffect(MobEffectCategory.BENEFICIAL, 0x00FFFF) {
             val player = event.entity ?: return
 
             if (isWearingFullMethilArmor(player)) {
-                if (!player.hasEffect(MethilEffect.METHILFY)) {
+                if (player.hasEffect(MethilEffect.METHILFY)) {
+                    val effectInstance = player.getEffect(MethilEffect.METHILFY)
+                    if (effectInstance != null && effectInstance.duration != -1) {
+                        effectInstance.update(MobEffectInstance(MethilEffect.METHILFY, -1, 1, false, true, true))
+                    }
+                } else {
                     player.addEffect(
-                        MobEffectInstance(MethilEffect.METHILFY, -1, 1, false, false, false)
+                        MobEffectInstance(MethilEffect.METHILFY, -1, 1, false, true, true)
                     )
                 }
             } else {
                 if (player.hasEffect(MethilEffect.METHILFY)) {
-                    player.removeEffect(MethilEffect.METHILFY)
+                    val effectInstance = player.getEffect(MethilEffect.METHILFY)
+                    if (effectInstance != null && effectInstance.duration == -1) {
+                        player.removeEffect(MethilEffect.METHILFY)
+                    }
                 }
-
             }
         }
     }

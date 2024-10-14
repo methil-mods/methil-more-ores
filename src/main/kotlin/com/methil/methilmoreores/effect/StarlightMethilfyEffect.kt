@@ -32,17 +32,25 @@ class StarlightMethilfyEffect : MobEffect(MobEffectCategory.BENEFICIAL, 0x00FFFF
         fun onPlayerTick(event: PlayerTickEvent.Post) {
             val player = event.entity ?: return
 
+
             if (isWearingFullStarlightMethilArmor(player)) {
-                if (!player.hasEffect(MethilEffect.STARLIGHT_METHILFY)) {
+                if (player.hasEffect(MethilEffect.STARLIGHT_METHILFY)) {
+                    val effectInstance = player.getEffect(MethilEffect.STARLIGHT_METHILFY)
+                    if (effectInstance != null && effectInstance.duration != -1) {
+                        effectInstance.update(MobEffectInstance(MethilEffect.STARLIGHT_METHILFY, -1, 1, false, true, true))
+                    }
+                } else {
                     player.addEffect(
-                        MobEffectInstance(MethilEffect.STARLIGHT_METHILFY, -1, 1, false, false, false)
+                        MobEffectInstance(MethilEffect.STARLIGHT_METHILFY, -1, 1, false, true, true)
                     )
                 }
             } else {
                 if (player.hasEffect(MethilEffect.STARLIGHT_METHILFY)) {
-                    player.removeEffect(MethilEffect.STARLIGHT_METHILFY)
+                    val effectInstance = player.getEffect(MethilEffect.STARLIGHT_METHILFY)
+                    if (effectInstance != null && effectInstance.duration == -1) {
+                        player.removeEffect(MethilEffect.STARLIGHT_METHILFY)
+                    }
                 }
-
             }
         }
     }
