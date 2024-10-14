@@ -19,6 +19,11 @@
 | ![Deepslate Methil Ore](/readme/block_upscale/deepslate_methil_ore.png) | **The Deepslate Methil Ore**<br>A harder version of Methil Ore, found deep underground. |
 | ![Nether Methil Ore](/readme/block_upscale/nether_methil_ore.png) | **The Nether Methil Ore**<br>A rare Methil Ore variant found in the Nether dimension. |
 
+### Methil Food
+| Item                                            | Name                                        |
+|-------------------------------------------------|---------------------------------------------|
+| ![Methil Apple](/readme/item_upscale/methil_apple.png) | **The Methil Apple**<br>A rare and powerful apple infused with the essence of Methil. Consuming it grants temporary buffs and enhances regeneration.<br><br>*"An apple a day keeps danger at bay... but this one might do more!"* |
+
 ### Methil Armors
 
 > Once fully equipped with Methil, you can gain some small bonuses...
@@ -40,6 +45,16 @@
 | ![Methil Sword](/readme/item_upscale/methil_sword.png)     | **The Methil Sword**<br>A sharp and deadly weapon forged from Methil, designed to deal damage with precision and power.<br><br>*"Sharp enough to cut through boredom... and enemies."* |
 | ![Methil Double Pickaxe](/readme/item_upscale/methil_double_pickaxe.png) | **The Methil Double Pickaxe**<br>A unique tool that allows for quicker mining by utilizing two pickaxes in one, ideal for resource gathering.<br><br>*"Twice the pickaxe, twice the fun!"* |
 | ![Methil Long Stick Sword](/readme/item_upscale/methil_long_stick_sword.png) | **The Methil Long Stick Sword**<br>A versatile weapon that combines reach and power, perfect for combat in close quarters and against distant foes.<br><br>*"Why settle for short swords when you can reach for greatness?"* |
+
+### Starlight Methil Ores
+| Item / Block                                        | Name                                                                      |
+|-----------------------------------------------------|---------------------------------------------------------------------------|
+| ![Starlight Methil](/readme/item_upscale/starlight_methil.png) | **The Starlight Methil**<br>A rare and radiant material infused with cosmic energy. It is stronger than regular Methil, making it ideal for crafting powerful tools and armor.<br><br>*"Forged from the stars, it shines brighter than any ore."* |
+
+### Starlight Methil Food
+| Item                                            | Name                                        |
+|-------------------------------------------------|---------------------------------------------|
+| ![Starlight Methil Apple](/readme/item_upscale/starlight_methil_apple.png) | **The Starlight Methil Apple**<br>A mystical apple enhanced with starlight, offering even greater benefits than the Methil Apple. It grants stronger buffs and increased healing when consumed.<br><br>*"The power of the stars, in a single bite."* |
 
 ### Starlight Methil Armor
 
