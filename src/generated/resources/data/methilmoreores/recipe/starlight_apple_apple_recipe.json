@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "methilmoreores:starlight_methil"
+    },
+    "A": {
+      "item": "minecraft:apple"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "A#A",
+    "AAA"
+  ],
+  "result": {
+    "count": 8,
+    "id": "methilmoreores:starlight_methil_apple"
+  }
+}

@@ -4,6 +4,7 @@ package com.methil.methilmoreores.data.recipes.provider
 import com.methil.methilmoreores.block.MethilBlock.METHIL_BLOCK
 import com.methil.methilmoreores.data.recipes.MethilRecipeProvider
 import com.methil.methilmoreores.item.methil.MethilItem
+import com.methil.methilmoreores.item.methil.MethilItem.METHIL_APPLE
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_AXE
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_BOOTS
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_CHESTPLATE
@@ -15,6 +16,7 @@ import com.methil.methilmoreores.item.methil.MethilItem.METHIL_LEGGINGS
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_PICKAXE
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_SHOVEL
 import com.methil.methilmoreores.item.methil.MethilItem.METHIL_SWORD
+import com.methil.methilmoreores.item.methil.MethilItem.STARLIGHT_METHIL_APPLE
 import com.methil.methilmoreores.item.starlight_methil.StarlightMethilItem.STARLIGHT_METHIL_AXE
 import com.methil.methilmoreores.item.starlight_methil.StarlightMethilItem.STARLIGHT_METHIL_BOOTS
 import com.methil.methilmoreores.item.starlight_methil.StarlightMethilItem.STARLIGHT_METHIL_CHESTPLATE
@@ -31,8 +33,7 @@ import net.minecraft.data.recipes.RecipeCategory
 import net.minecraft.data.recipes.RecipeOutput
 import net.minecraft.data.recipes.ShapedRecipeBuilder
 import net.minecraft.data.recipes.ShapelessRecipeBuilder
-import net.minecraft.world.item.Items.NETHER_STAR
-import net.minecraft.world.item.Items.STICK
+import net.minecraft.world.item.Items.*
 import net.minecraft.world.item.crafting.ShapelessRecipe
 import java.util.concurrent.CompletableFuture
 
@@ -42,6 +43,24 @@ class MethilNormalCraftingTableRecipeProvider(
     private val recipeOutput: RecipeOutput
 ) : MethilRecipeProvider(generator, pRegistries) {
     fun build() {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, METHIL_APPLE.get(), 1)
+            .pattern("###")
+            .pattern("#A#")
+            .pattern("###")
+            .define('#', METHIL_ITEM)
+            .define('A', APPLE)
+            .unlockedBy("has_item", has(METHIL_ITEM))
+            .save(this.recipeOutput, getModId("methil_apple_recipe"))
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, STARLIGHT_METHIL_APPLE.get(), 8)
+            .pattern("AAA")
+            .pattern("A#A")
+            .pattern("AAA")
+            .define('#', STARLIGHT_METHIL_ITEM)
+            .define('A', APPLE)
+            .unlockedBy("has_item", has(STARLIGHT_METHIL_ITEM))
+            .save(this.recipeOutput, getModId("starlight_apple_apple_recipe"))
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, METHIL_ITEM.get(), 9)
             .requires(METHIL_BLOCK.get())

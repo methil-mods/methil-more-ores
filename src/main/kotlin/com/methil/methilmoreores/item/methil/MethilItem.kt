@@ -32,7 +32,7 @@ object MethilItem {
                  Supplier { MobEffectInstance(MethilEffect.METHILFY, 600, 1) },
                 1.0f
             ).effect(
-                Supplier { MobEffectInstance(MobEffects.REGENERATION, 600, 1) },
+                Supplier { MobEffectInstance(MobEffects.REGENERATION, 100, 1) },
                 1.0f
             )
             .build()
@@ -45,7 +45,7 @@ object MethilItem {
                 Supplier { MobEffectInstance(MethilEffect.STARLIGHT_METHILFY, 600, 1) },
                 1.0f
             ).effect(
-                Supplier { MobEffectInstance(MobEffects.REGENERATION, 600, 1) },
+                Supplier { MobEffectInstance(MobEffects.REGENERATION, 300, 2) },
                 1.0f
             )
             .build()
