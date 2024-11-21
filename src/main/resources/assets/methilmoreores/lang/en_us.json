@@ -45,5 +45,8 @@
   "effect.methilmoreores.methilfy": "Methilfy",
   "effect.methilmoreores.starlight_methilfy": "Starlight Methilfy",
 
-  "itemGroup.methil.methilmoreores": "Methil More Ores"
+  "itemGroup.methil.methilmoreores": "Methil More Ores",
+
+  "painting.methilmoreores.methil_painting.title": "Methil Ore",
+  "painting.methilmoreores.methil_painting.author": "Methil"
 }
