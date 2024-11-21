@@ -42,5 +42,9 @@
     "item.methilmoreores.methil_apple": "Pomme de Méthil",
     "item.methilmoreores.starlight_methil_apple": "Pomme de Méthil Étoilé",
   
-    "itemGroup.methil.methilmoreores": "Methil More Ores"
+    "itemGroup.methil.methilmoreores": "Methil More Ores",
+
+
+    "painting.methilmoreores.methil_painting.title": "Methil Ore",
+    "painting.methilmoreores.methil_painting.author": "Methil"
 }
