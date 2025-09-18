@@ -22,6 +22,7 @@ class ModBlockTagsProvider(
     BlockTagsProvider(output, lookupProvider, MODID, existingFileHelper) {
     override fun addTags(pProvider: HolderLookup.Provider) {
         LOGGER.info("Generate TAG")
+
         tag(MethilTags.BlockTagsInit.METHIL_ORE_TAG)
             .add(METHIL_ORE_BLOCK.get())
             .add(NETHER_METHIL_ORE_BLOCK.get())
