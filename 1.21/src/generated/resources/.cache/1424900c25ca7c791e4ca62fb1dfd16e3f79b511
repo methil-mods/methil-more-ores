@@ -1,0 +1,10 @@
+// 1.21	2025-09-18T13:25:18.403356	Tags for minecraft:item mod id methilmoreores
+b5e012a66fddd52859ce8e5310274ebf560a8164 data/minecraft/tags/item/axes.json
+3a04b99b93be09bf8de638d480bfe790f3f3f502 data/minecraft/tags/item/enchantable/chest_armor.json
+3a59ecab5cd64330cc80d85036ce087422fef50e data/minecraft/tags/item/enchantable/foot_armor.json
+616f32f2b4fd73094765f1fbf0167cb8ab9e8f4a data/minecraft/tags/item/enchantable/head_armor.json
+5fa7e25062699ca8445a1dc2ac412ce18e3ac7e3 data/minecraft/tags/item/enchantable/leg_armor.json
+ccaf9d1dfe60f01d3a8829b50de24ccb9064e140 data/minecraft/tags/item/hoes.json
+af7648c34e398e2f95d1a68827cdae728f4fd591 data/minecraft/tags/item/pickaxes.json
+53a695d31f81c3f7c9fec7fed3050ded6eb22a6b data/minecraft/tags/item/shovels.json
+008e5748e5adb3e9013f2ec7a2e0637e5a1ac0a2 data/minecraft/tags/item/swords.json

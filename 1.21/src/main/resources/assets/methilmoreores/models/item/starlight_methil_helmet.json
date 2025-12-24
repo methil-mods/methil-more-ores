@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "methilmoreores:item/starlight_methil_helmet"
+  }
+}

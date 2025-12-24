@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "methilmoreores:methil_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "methilmoreores:methil"
+  }
+}

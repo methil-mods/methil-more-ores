@@ -1,0 +1,50 @@
+{
+    "item.methilmoreores.creative_tab": "Methil",
+    "block.methilmoreores.methil_ore": "Minerai de Méthil",
+    "block.methilmoreores.methil_block": "Bloc de Méthil",
+    "block.methilmoreores.deepslate_methil_ore": "Minerai de Méthil des abîmes",
+    "block.methilmoreores.nether_methil_ore": "Minerai de Méthil du Nether",
+    "item.methilmoreores.methil": "Méthil",
+    "item.methilmoreores.methil_pickaxe": "Pioche en Méthil",
+    "item.methilmoreores.methil_double_pickaxe": "Pioche Double en Méthil",
+    "item.methilmoreores.methil_shovel": "Pelle en Méthil",
+    "item.methilmoreores.methil_axe": "Hache en Méthil",
+    "item.methilmoreores.methil_hoe": "Houe en Méthil",
+    "item.methilmoreores.methil_sword": "Épée en Méthil",
+    "item.methilmoreores.methil_long_stick_sword": "Épée Longue en Méthil",
+    "item.methilmoreores.methil_helmet": "Casque en Méthil",
+    "item.methilmoreores.methil_chestplate": "Plastron en Méthil",
+    "item.methilmoreores.methil_leggings": "Jambières en Méthil",
+    "item.methilmoreores.methil_boots": "Bottes en Méthil",
+  
+    "item.methilmoreores.emerald_pickaxe": "Pioche en Émeraude",
+    "item.methilmoreores.emerald_shovel": "Pelle en Émeraude",
+    "item.methilmoreores.emerald_axe": "Hache en Émeraude",
+    "item.methilmoreores.emerald_hoe": "Houe en Émeraude",
+    "item.methilmoreores.emerald_sword": "Épée en Émeraude",
+    "item.methilmoreores.emerald_helmet": "Casque en Émeraude",
+    "item.methilmoreores.emerald_chestplate": "Plastron en Émeraude",
+    "item.methilmoreores.emerald_leggings": "Jambières en Émeraude",
+    "item.methilmoreores.emerald_boots": "Bottes en Émeraude",
+
+    "item.methilmoreores.starlight_methil": "Méthil Étoilé",
+
+    "item.methilmoreores.starlight_methil_helmet": "Casque de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_chestplate": "Plastron de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_leggings": "Jambières de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_boots": "Bottes de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_sword": "Épée de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_pickaxe": "Pioche de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_axe": "Hache de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_shovel": "Pelle de Méthil Étoilé",
+    "item.methilmoreores.starlight_methil_hoe": "Houe de Méthil Étoilé",
+
+    "item.methilmoreores.methil_apple": "Pomme de Méthil",
+    "item.methilmoreores.starlight_methil_apple": "Pomme de Méthil Étoilé",
+  
+    "itemGroup.methil.methilmoreores": "Methil More Ores",
+
+
+    "painting.methilmoreores.methil_painting.title": "Methil Ore",
+    "painting.methilmoreores.methil_painting.author": "Methil"
+}

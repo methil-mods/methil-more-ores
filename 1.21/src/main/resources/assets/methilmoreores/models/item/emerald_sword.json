@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "methilmoreores:item/emerald_sword"
+  }
+}
